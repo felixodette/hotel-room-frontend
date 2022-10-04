@@ -7,6 +7,7 @@ function AddRoom() {
   const [size, setSize] = useState('');
   const [view, setView] = useState('');
   const [bedding, setBedding] = useState('');
+  const [message, setMessage] = useState('');
 
   const submitRoom = (e) => {
     e.preventDefault();
@@ -25,7 +26,8 @@ function AddRoom() {
       body: JSON.stringify(room),
     };
     fetch('http://localhost:3000/api/v1/rooms/', requestOptions)
-      .then((response) => response.json());
+      .then((response) => response.json())
+      .then(setMessage('Room created'));
 
     setName('');
     setDescription('');
@@ -33,6 +35,7 @@ function AddRoom() {
     setSize('');
     setView('');
     setBedding('');
+    setInterval(() => { setMessage(''); }, 3000);
   };
   return (
     <div>
@@ -128,6 +131,9 @@ function AddRoom() {
           Add
         </button>
       </form>
+      <span>
+        {message}
+      </span>
     </div>
   );
 }
