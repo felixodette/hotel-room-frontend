@@ -7,6 +7,33 @@ function AddRoom() {
   const [size, setSize] = useState('');
   const [view, setView] = useState('');
   const [bedding, setBedding] = useState('');
+
+  const submitRoom = (e) => {
+    e.preventDefault();
+    const room = {
+      name,
+      description,
+      image,
+      size,
+      view,
+      bedding,
+    };
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(room),
+    };
+    fetch('http://localhost:3000/api/v1/rooms/', requestOptions)
+      .then((response) => response.json());
+
+    setName('');
+    setDescription('');
+    setImage('');
+    setSize('');
+    setView('');
+    setBedding('');
+  };
   return (
     <div>
       <h2>Add Room</h2>
