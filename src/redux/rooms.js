@@ -27,3 +27,5 @@ const roomsReducer = (state = initialState, action) => {
             return state;
     }
 }
+
+export default roomsReducer;

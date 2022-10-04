@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-// import greetingReducer from './greeting';
+import roomsReducer from './rooms';
 
 const rootReducer = combineReducers({
   // Add your reducers here like below
-  // greeting: greetingReducer,
+  rooms: roomsReducer,
 });
 
 const store = createStore(rootReducer, {}, applyMiddleware(thunk, logger));
