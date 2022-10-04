@@ -11,3 +11,19 @@ export const getRooms = () => async (dispatch) => {
         payload: rooms,
     });
 };
+
+const initialState = {
+    rooms: [],
+};
+
+const roomsReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case GET_ROOMS:
+            return {
+                ...state,
+                rooms: action.payload,
+            };
+        default:
+            return state;
+    }
+}
