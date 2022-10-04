@@ -1,5 +1,12 @@
+import React, { useState } from 'react';
 
 function AddRoom() {
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState('');
+  const [size, setSize] = useState('');
+  const [view, setView] = useState('');
+  const [bedding, setBedding] = useState('');
   return (
     <div>
       <h2>Add Room</h2>
