@@ -6,24 +6,32 @@ const DeleteRoom = () => {
   const dispatch = useDispatch();
   const rooms = useSelector((state) => state.rooms.rooms);
 
+  const requestOptions = {
+    method: 'DELETE',
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  };
+
+  const deleteRoom = (id) => {
+    fetch(`http://localhost:3000/api/v1/rooms/${id}`, requestOptions);
+  };
+
   useEffect(() => {
     dispatch(getRooms());
   }, [dispatch]);
   return (
     <div>
       <h1>Rooms</h1>
-      <h2>Plese select a room</h2>
       <div className="rooms">
         {rooms.map((room) => (
-          <a href={`/room/${room.id}`} key={room.id}>
-            <div className="room" key={room.id}>
-              <img src={room.image} alt={room.name} />
-              <div className="room-info">
-                <h3>{room.name}</h3>
-                <p>{room.description}</p>
-              </div>
-            </div>
-          </a>
+          <div className="room" key={room.id}>
+            <h3>{room.name}</h3>
+            <button
+              type="button"
+              onClick={() => deleteRoom(room.id)}
+            >
+              Delete
+            </button>
+          </div>
         ))}
       </div>
     </div>
