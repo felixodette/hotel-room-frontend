@@ -3,7 +3,8 @@ import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import AddRoom from './Rooms/AddRoom';
 import Rooms from './Rooms';
-import AddUser from './user';
+import AddUser from './User';
+import Room from './Rooms/Room';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         {/* <Route path="/reservations" element={<MyReservations />} /> */}
         {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
         <Route path="/room-new" element={<AddRoom />} />
+        <Route path="/room/:id" element={<Room />} />
         {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
         <Route path="/user" element={<AddUser />} />
       </Routes>
