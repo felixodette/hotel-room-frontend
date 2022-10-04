@@ -9,11 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Rooms />} />
-        {/* <Route path="/" element={<Room />} />
-        <Route path="/reservations" element={<MyReservations />} />
-        <Route path="/reservations-new" element={<ReservationForm />} />
-        <Route path="/room-new" element={<AddRoom />} />
-        <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
+        <Route path="/room/:id" element={<div>Room</div>} />
       </Routes>
     </BrowserRouter>
   );

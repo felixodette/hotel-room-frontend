@@ -16,13 +16,15 @@ const Rooms = () => {
 			<h2>Plese select a room</h2>
 			<div className="rooms">
 				{rooms.map((room) => (
-					<div className="room" key={room.id}>
-						<img src={room.image} alt={room.name} />
-						<div className="room-info">
-							<h3>{room.name}</h3>
-							<p>{room.description}</p>
+					<a href={`/room/${room.id}`} key={room.id}>
+						<div className="room" key={room.id}>
+							<img src={room.image} alt={room.name} />
+							<div className="room-info">
+								<h3>{room.name}</h3>
+								<p>{room.description}</p>
+							</div>
 						</div>
-					</div>
+					</a>
 				))}
 			</div>
 		</div>
