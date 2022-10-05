@@ -2,7 +2,7 @@ import '../App.css';
 import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import AddRoom from './Rooms/AddRoom';
-import Rooms from './Rooms';
+import Rooms from './Rooms/Rooms';
 import AddUser from './user';
 
 function App() {
