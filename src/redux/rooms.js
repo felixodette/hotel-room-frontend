@@ -1,6 +1,7 @@
 const roomsApiUrl = 'http://localhost:3000/api/v1/rooms';
 
 const GET_ROOMS = 'GET_ROOMS';
+const DELETE_ROOM = 'DELETE_ROOM';
 
 export const getRooms = () => async (dispatch) => {
   const response = await fetch(roomsApiUrl);
@@ -10,6 +11,10 @@ export const getRooms = () => async (dispatch) => {
     payload: rooms,
   });
 };
+export const deleteRoom = (id) => ({
+  type: DELETE_ROOM,
+  id,
+});
 
 const initialState = {
   rooms: [],
@@ -21,6 +26,11 @@ const roomsReducer = (state = initialState, action) => {
       return {
         ...state,
         rooms: action.payload,
+      };
+    case DELETE_ROOM:
+      return {
+        ...state,
+        rooms: state.rooms.filter((room) => room.id !== action.id),
       };
     default:
       return state;
