@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import AddRoom from './Rooms/AddRoom';
 import Rooms from './Rooms';
-import AddUser from './User';
+import AddUser from './user';
 import Room from './Rooms/Room';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         <Route path="/room/:id" element={<Room />} />
         {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
         <Route path="/user" element={<AddUser />} />
+        <Route path="/rooms/:id" element={<Room />} />
       </Routes>
     </BrowserRouter>
   );

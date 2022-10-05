@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 
 const Room = () => {
   const [roomDetails, setRoomDetails] = useState('');
   const { id } = useParams();
+
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/v1/rooms/${id}`)
-      .then((response) => {
-        setRoomDetails(response.data);
-      });
+    const roomData = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    };
+    fetch(`http://localhost:3001/api/v1/rooms/${id}`, roomData)
+      .then((response) => response.json())
+      .then((data) => setRoomDetails(data));
+    // .then((response) => {
+    //   setRoomDetails(response.data);
+    // });
+    console.log(roomDetails);
   }, []);
 
   return (
@@ -27,10 +34,7 @@ const Room = () => {
         {' '}
       </h1>
       <h1>
-        {' '}
-        Room image:
-        {roomDetails.image}
-        {' '}
+        <img src={roomDetails.image} alt={roomDetails.name} />
       </h1>
       <h1>
         {' '}
