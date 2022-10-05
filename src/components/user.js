@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 function AddUser() {
   const [name, setName] = useState('');
@@ -7,16 +6,19 @@ function AddUser() {
 
   const createUser = (e) => {
     e.preventDefault();
-    localStorage.setItem('name', name);
+
     const user = {
       name,
     };
 
     const userData = {
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
     };
-    axios.post('http://localhost:3001/api/v1/users', userData)
+    fetch('http://localhost:3001/api/v1/users', userData)
+      .then((response) => response.json())
+      .then((data) => { localStorage.setItem('id', data.id); localStorage.setItem('name', data.name); })
       .then(setAlert('User created'));
 
     setName('');
