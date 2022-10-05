@@ -13,10 +13,6 @@ const Room = () => {
     fetch(`http://localhost:3001/api/v1/rooms/${id}`, roomData)
       .then((response) => response.json())
       .then((data) => setRoomDetails(data));
-    // .then((response) => {
-    //   setRoomDetails(response.data);
-    // });
-    console.log(roomDetails);
   }, []);
 
   return (
