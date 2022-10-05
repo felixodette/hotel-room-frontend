@@ -3,7 +3,7 @@ import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import AddRoom from './Rooms/AddRoom';
 import Rooms from './Rooms';
-import AddUser from './user';
+import AddUser from './User';
 
 function App() {
   return (
