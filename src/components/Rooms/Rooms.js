@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRooms } from '../../redux/rooms';
+import { GrFacebookOption } from "react-icons/gr";
 
 const Rooms = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,11 @@ const Rooms = () => {
               <div className="card-body">
                 <h3 className="card-title fw-bold fs-5 mb-3 mb-md-4">{room.name}</h3>
                 <p className="card-text fs-6 opacity-50 mb-3 mb-md-4 text-start text-md-center text-lg-start text-xl-center" style={{ fontSize: '1rem' }}> {room.description}</p>
+              </div>
+              <div className="card-footer bg-transparent border-0">
+                <GrFacebookOption className="fs-1" />
+                <GrFacebookOption className="fs-1" />
+                <GrFacebookOption className="fs-1" />
               </div>
             </div>
           </a>
