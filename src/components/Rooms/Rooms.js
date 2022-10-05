@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRooms } from '../../redux/rooms';
 import { GrFacebookOption } from "react-icons/gr";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillLinkedin } from "react-icons/ai";
 
 const Rooms = () => {
   const dispatch = useDispatch();
@@ -24,9 +26,9 @@ const Rooms = () => {
                 <p className="card-text fs-6 opacity-50 mb-3 mb-md-4 text-start text-md-center text-lg-start text-xl-center" style={{ fontSize: '1rem' }}> {room.description}</p>
               </div>
               <div className="card-footer bg-transparent border-0">
-                <GrFacebookOption className="fs-1" />
-                <GrFacebookOption className="fs-1" />
-                <GrFacebookOption className="fs-1" />
+                <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
+                <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
+                <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2" />
               </div>
             </div>
           </a>
