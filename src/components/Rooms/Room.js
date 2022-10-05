@@ -17,6 +17,7 @@ const Room = () => {
 
   return (
     <div>
+      <button type="button">Reserve</button>
       <h1>
         {' '}
         Room name:
