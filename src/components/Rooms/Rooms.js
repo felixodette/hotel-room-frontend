@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRooms } from '../redux/rooms';
+import { getRooms } from '../../redux/rooms';
 
 const Rooms = () => {
   const dispatch = useDispatch();
