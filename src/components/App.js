@@ -6,7 +6,6 @@ import Rooms from './Rooms';
 import DeleteRoom from './Rooms/DeleteRoom';
 import AddUser from './user';
 
-
 function App() {
   return (
     <BrowserRouter>
