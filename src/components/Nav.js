@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 
 const Nav = () => (
   <>
-    <nav id="sidebarMenu" className="collapse d-lg-block sidebar bg-white">
+    <nav id="sidebarMenu" className="collapse d-lg-block sidebar">
       <div className="position-sticky">
         <div className="list-group list-group-flush mx-3 mt-4">
 
@@ -27,7 +27,7 @@ const Nav = () => (
       </div>
     </nav>
 
-    <nav id="main-navbar" className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav id="main-navbar" className="navbar navbar-expand-lg fixed-top">
 
       <div className="container-fluid">
 

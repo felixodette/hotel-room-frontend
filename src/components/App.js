@@ -9,22 +9,25 @@ import Nav from './Nav';
 
 function App() {
   return (
-    <>
-      <Nav />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Rooms />} />
-          {/* <Route path="/reservations" element={<MyReservations />} /> */}
-          {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
-          <Route path="/room-new" element={<AddRoom />} />
-          <Route path="/room/:id" element={<Room />} />
-          {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
-          <Route path="/room-delete" element={<DeleteRoom />} />
-          <Route path="/user" element={<AddUser />} />
-        </Routes>
-      </BrowserRouter>
-
-    </>
+    <div className="row">
+      <div className="col-3">
+        <Nav />
+      </div>
+      <div className="col-9">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Rooms />} />
+            {/* <Route path="/reservations" element={<MyReservations />} /> */}
+            {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
+            <Route path="/room-new" element={<AddRoom />} />
+            <Route path="/room/:id" element={<Room />} />
+            {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
+            <Route path="/room-delete" element={<DeleteRoom />} />
+            <Route path="/user" element={<AddUser />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 }
 
