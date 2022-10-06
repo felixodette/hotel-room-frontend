@@ -128,7 +128,7 @@ const Rooms = () => {
               <img src={room.image} alt={room.name} className="card-img-top rounded-5 mb-3 mb-md-4 mx-auto room-image" />
               <div className="card-body">
                 <h3 className="card-title fw-bold fs-5 mb-3 mb-md-4">{room.name}</h3>
-                <p className="card-text fs-6 opacity-50 mb-3 mb-md-4 text-start text-md-center text-lg-start text-xl-center room-description">
+                <p className="card-text fs-6 opacity-50 mb-2 mb-md-3 text-start text-md-center text-lg-start text-xl-center room-description">
                   {' '}
                   {room.description}
                 </p>
