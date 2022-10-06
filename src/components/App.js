@@ -11,7 +11,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Rooms />} />
-        <Route path="/room/:id" element={<div>Room</div>} />
         {/* <Route path="/reservations" element={<MyReservations />} /> */}
         {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
         <Route path="/room-new" element={<AddRoom />} />
@@ -19,7 +18,6 @@ function App() {
         {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
         <Route path="/room-delete" element={<DeleteRoom />} />
         <Route path="/user" element={<AddUser />} />
-        <Route path="/rooms/:id" element={<Room />} />
       </Routes>
     </BrowserRouter>
   );
