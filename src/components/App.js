@@ -1,8 +1,7 @@
-import '../App.css';
 import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
 import AddRoom from './Rooms/AddRoom';
-import Rooms from './Rooms';
+import Rooms from './Rooms/Rooms';
 import DeleteRoom from './Rooms/DeleteRoom';
 import AddUser from './user';
 import Room from './Rooms/Room';
