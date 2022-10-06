@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTwitter } from 'react-icons/fa';
+import { GrFacebookOption } from 'react-icons/gr';
+import { AiFillLinkedin } from 'react-icons/ai';
 
 const Nav = () => (
   <>
@@ -24,6 +26,12 @@ const Nav = () => (
             <span>Make Reservations</span>
           </a>
         </div>
+
+      </div>
+      <div className="card-footer bg-transparent border-0 fixed-bottom">
+        <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
+        <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
+        <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2" />
       </div>
     </nav>
 
