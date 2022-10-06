@@ -3,10 +3,11 @@ import { useSelector, useDispatch } from 'react-redux';
 import { GrFacebookOption } from 'react-icons/gr';
 import { FaTwitter } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
-import { BiRightArrow } from "react-icons/bi";
-import { BiLeftArrow } from "react-icons/bi";
-import { getRooms } from '../../redux/rooms';
+import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
+import PropTypes from 'prop-types';
+
 import Carousel from 'react-multi-carousel';
+import { getRooms } from '../../redux/rooms';
 import 'react-multi-carousel/lib/styles.css';
 import './Rooms.css';
 
@@ -16,86 +17,83 @@ const Rooms = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1200 },
-      items: 3
+      items: 3,
     },
     desktop: {
       breakpoint: { max: 1200, min: 992 },
-      items: 3
+      items: 3,
     },
     tablet: {
       breakpoint: { max: 992, min: 576 },
-      items: 2
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 576, min: 0 },
-      items: 1
-    }
+      items: 1,
+    },
   };
 
   useEffect(() => {
     dispatch(getRooms());
   }, [dispatch]);
-  const CustomRightArrow = ({ onClick, ...rest }) => {
-    const {
-      onMove,
-      carouselState: { currentSlide, deviceType }
-    } = rest;
-    // onMove means if dragging or swiping in progress.
-    return (
-      <button
-        className="btn btn-primary"
-        onClick={() => onClick()}
-        style={{
-          position: "absolute",
-          top: "50%",
-          right: "0",
-          transform: "translateY(-50%)",
-          zIndex: "1",
-          backgroundColor: "#97BF11",
-          border: "none",
-          borderRadius: "50% 0 0 50%",
-          width: "90px",
-          height: "60px",
-          fontSize: "20px",
-          color: "#fff",
-          fontWeight: "bold",
-          boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)"
-        }}
-      >
-        <BiRightArrow />
-      </button>
-    );
+  const CustomRightArrow = ({ onClick }) => (
+    <button
+      type="button"
+      className="btn btn-primary"
+      onClick={() => onClick()}
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '0',
+        transform: 'translateY(-50%)',
+        zIndex: '1',
+        backgroundColor: '#97BF11',
+        border: 'none',
+        borderRadius: '50% 0 0 50%',
+        width: '90px',
+        height: '60px',
+        fontSize: '20px',
+        color: '#fff',
+        fontWeight: 'bold',
+        boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.2)',
+      }}
+    >
+      <BiRightArrow />
+    </button>
+  );
+
+  const CustomLeftArrow = ({ onClick }) => (
+    <button
+      type="button"
+      className="btn btn-primary arrows"
+      onClick={() => onClick()}
+      style={{
+        position: 'absolute',
+        top: '50%',
+        left: '0',
+        transform: 'translateY(-50%)',
+        zIndex: '1',
+        backgroundColor: '#97BF11',
+        border: 'none',
+        borderRadius: '0 50% 50% 0',
+        width: '90px',
+        height: '60px',
+        fontSize: '20px',
+        color: '#fff',
+        fontWeight: 'bold',
+        boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.2)',
+      }}
+    >
+      <BiLeftArrow />
+    </button>
+  );
+
+  CustomRightArrow.propTypes = {
+    onClick: PropTypes.func.isRequired,
   };
 
-  const CustomLeftArrow = ({ onClick, ...rest }) => {
-    const {
-      onMove,
-      carouselState: { currentSlide, deviceType }
-    } = rest;
-    return (
-      <button
-        className="btn btn-primary arrows"
-        onClick={() => onClick()}
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "0",
-          transform: "translateY(-50%)",
-          zIndex: "1",
-          backgroundColor: "#97BF11",
-          border: "none",
-          borderRadius: "0 50% 50% 0",
-          width: "90px",
-          height: "60px",
-          fontSize: "20px",
-          color: "#fff",
-          fontWeight: "bold",
-          boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)"
-        }}
-      >
-        <BiLeftArrow />
-      </button>
-    );
+  CustomLeftArrow.propTypes = {
+    onClick: PropTypes.func.isRequired,
   };
 
   return (
@@ -104,25 +102,25 @@ const Rooms = () => {
       <h2 className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5">Please select a Room</h2>
       <Carousel
         responsive={responsive}
-        infinite={true}
-        autoPlay={true}
+        infinite
+        autoPlay
         autoPlaySpeed={3000}
-        keyBoardControl={true}
+        keyBoardControl
         customTransition="all .5"
         transitionDuration={500}
         containerClass="carousel-container ms-2 me-2 pt-5 pb-5"
         deviceType={responsive.deviceType}
-        partialVisible={true}
-        swipeable={true}
-        showDots={true}
+        partialVisible
+        swipeable
+        showDots
         dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle"
-        renderDotsOutside={true}
+        renderDotsOutside
         itemClass="carousel-item-padding-40-px ps-md-2 pe-md-2"
         slidesToSlide={1}
-        arrows={true}
+        arrows
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        removeArrowOnDeviceType={['tablet', 'mobile']}
       >
         {rooms.map((room) => (
           <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark room-card">
@@ -158,7 +156,8 @@ const Rooms = () => {
             </div>
           </a>
         ))}
-      </Carousel>;
+      </Carousel>
+      ;
     </div>
   );
 };
