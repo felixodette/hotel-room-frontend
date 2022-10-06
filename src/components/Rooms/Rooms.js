@@ -98,7 +98,7 @@ const Rooms = () => {
 
   return (
     <div>
-      <h1 className="text-center mt-5 mb-2 pt-5 fw-bold fs-1">Rooms</h1>
+      <h1 className="text-center mt-5 mb-2 pt-5 fw-bold fs-1">ROOMS</h1>
       <h2 className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5">Please select a Room</h2>
       <Carousel
         responsive={responsive}
