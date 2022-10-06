@@ -9,7 +9,6 @@ import { getRooms } from '../../redux/rooms';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Rooms.css';
-import { hover } from '@testing-library/user-event/dist/hover';
 
 const Rooms = () => {
   const dispatch = useDispatch();
@@ -98,7 +97,7 @@ const Rooms = () => {
       </button>
     );
   };
-      
+
   return (
     <div>
       <h1 className="text-center mt-5 mb-2 pt-5 fw-bold fs-1">Rooms</h1>
@@ -137,9 +136,24 @@ const Rooms = () => {
                 </p>
               </div>
               <div className="card-footer bg-transparent border-0">
-                <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons" />
-                <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons" />
-                <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle mx-2 p-2 social-icons" />
+                <GrFacebookOption
+                  onClick={() => {
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank');
+                  }}
+                  className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons"
+                />
+                <FaTwitter
+                  onClick={() => {
+                    window.open(`https://twitter.com/intent/tweet?url=${window.location.href}`, '_blank');
+                  }}
+                  className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons"
+                />
+                <AiFillLinkedin
+                  onClick={() => {
+                    window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`, '_blank');
+                  }}
+                  className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle mx-2 p-2 social-icons"
+                />
               </div>
             </div>
           </a>
