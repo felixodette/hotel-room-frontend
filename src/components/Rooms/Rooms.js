@@ -50,7 +50,7 @@ const Rooms = () => {
         backgroundColor: '#97BF11',
         border: 'none',
         borderRadius: '50% 0 0 50%',
-        width: '90px',
+        width: '80px',
         height: '60px',
         fontSize: '20px',
         color: '#fff',
@@ -76,7 +76,7 @@ const Rooms = () => {
         backgroundColor: '#97BF11',
         border: 'none',
         borderRadius: '0 50% 50% 0',
-        width: '90px',
+        width: '80px',
         height: '60px',
         fontSize: '20px',
         color: '#fff',
@@ -115,7 +115,7 @@ const Rooms = () => {
         showDots
         dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle"
         renderDotsOutside
-        itemClass="carousel-item-padding-40-px ps-md-2 pe-md-2 rounded-5 room-card"
+        itemClass="carousel-item-padding-40-px ps-md-4 pe-md-2 rounded-5 room-card"
         slidesToSlide={1}
         arrows
         customRightArrow={<CustomRightArrow />}
