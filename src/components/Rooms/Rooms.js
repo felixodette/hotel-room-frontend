@@ -39,20 +39,21 @@ const Rooms = () => {
       <h2 className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5">Please select a Room</h2>
       <Carousel
         responsive={responsive}
-        // swipeable={false}
-        // draggable={false}
+        partialVisible={true}
+        swipeable={true}
         showDots={true}
         // ssr={true} // means to render carousel on server-side.
         // infinite={true}
         // autoPlay={this.props.deviceType !== "mobile" ? true : false}
         // autoPlaySpeed={1000}
-        keyBoardControl={true}
+        // keyBoardControl={true}
         // customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container container-with-dots"
+        containerClass="carousel-container"
         // deviceType={this.props.deviceType}
-        // dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px col"
+        dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle"
+        renderDotsOutside={true}
+        itemClass="carousel-item-padding-40-px"
       >
         {rooms.map((room) => (
           <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark">
