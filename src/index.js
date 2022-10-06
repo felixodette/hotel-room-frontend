@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import App from './components/App';
 // Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 // Custom CSS
-import "./index.css";
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
