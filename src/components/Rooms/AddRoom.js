@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/AddRoom.css';
 
 function AddRoom() {
   const [name, setName] = useState('');
@@ -38,7 +39,7 @@ function AddRoom() {
     setInterval(() => { setMessage(''); }, 3000);
   };
   return (
-    <div>
+    <div id="add-room-container" className="container-fluid d-flex flex-column justify-content-center align-items-center">
       <h2>Add Room</h2>
       <form
         onSubmit={submitRoom}
