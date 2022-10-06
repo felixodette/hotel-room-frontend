@@ -1,15 +1,14 @@
 .room-card:hover {
-  box-shadow: 0 0 10px 0 #97bf11;
-  background-color: #f1f1f1;
+  box-shadow: 0 0 10px 0 #96bf1165;
 }
 
 .room-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .room-image {
   width: 250px;
-  height: 250px;
+  height: 280px;
 }
 
 .social-icons:hover {

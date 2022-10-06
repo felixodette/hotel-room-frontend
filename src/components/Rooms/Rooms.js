@@ -115,7 +115,7 @@ const Rooms = () => {
         showDots
         dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle"
         renderDotsOutside
-        itemClass="carousel-item-padding-40-px ps-md-2 pe-md-2"
+        itemClass="carousel-item-padding-40-px ps-md-2 pe-md-2 rounded-circle room-card"
         slidesToSlide={1}
         arrows
         customRightArrow={<CustomRightArrow />}
@@ -123,9 +123,9 @@ const Rooms = () => {
         removeArrowOnDeviceType={['tablet', 'mobile']}
       >
         {rooms.map((room) => (
-          <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark room-card">
-            <div className="card h-100 shadow border-0 rounded-3 bg-light text-center p-3 p-md-5 transition room-card" key={room.id}>
-              <img src={room.image} alt={room.name} className="card-img-top rounded-3 mb-3 mb-md-4 mx-auto room-image" />
+          <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark w-100">
+            <div className="card h-100 border-0 rounded-circle bg-light text-center p-3 p-md-5 transition" key={room.id}>
+              <img src={room.image} alt={room.name} className="card-img-top rounded-circle mb-3 mb-md-4 mx-auto room-image" />
               <div className="card-body">
                 <h3 className="card-title fw-bold fs-5 mb-3 mb-md-4">{room.name}</h3>
                 <p className="card-text fs-6 opacity-50 mb-3 mb-md-4 text-start text-md-center text-lg-start text-xl-center room-description">
