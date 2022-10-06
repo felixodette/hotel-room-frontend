@@ -4,10 +4,31 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { FaTwitter } from 'react-icons/fa';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { getRooms } from '../../redux/rooms';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Rooms = () => {
   const dispatch = useDispatch();
   const rooms = useSelector((state) => state.rooms.rooms);
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1200 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 1200, min: 992 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 992, min: 576 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 576, min: 0 },
+      items: 1
+    }
+  };
 
   useEffect(() => {
     dispatch(getRooms());
@@ -16,9 +37,25 @@ const Rooms = () => {
     <div>
       <h1 className="text-center mt-5 mb-2 pt-5 fw-bold fs-1">Rooms</h1>
       <h2 className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5">Please select a Room</h2>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
+      <Carousel
+        responsive={responsive}
+        // swipeable={false}
+        // draggable={false}
+        showDots={true}
+        // ssr={true} // means to render carousel on server-side.
+        // infinite={true}
+        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+        // autoPlaySpeed={1000}
+        keyBoardControl={true}
+        // customTransition="all .5"
+        transitionDuration={500}
+        containerClass="carousel-container container-with-dots"
+        // deviceType={this.props.deviceType}
+        // dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px col"
+      >
         {rooms.map((room) => (
-          <a href={`/room/${room.id}`} key={room.id} className="col text-decoration-none text-dark">
+          <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark">
             <div className="card h-100 shadow border-0 rounded-3 bg-light text-center p-3 p-md-5 transition" key={room.id}>
               <img src={room.image} alt={room.name} className="card-img-top rounded-3 mb-3 mb-md-4 mx-auto" style={{ width: '300px', height: '200px' }} />
               <div className="card-body">
@@ -36,7 +73,7 @@ const Rooms = () => {
             </div>
           </a>
         ))}
-      </div>
+      </Carousel>;
     </div>
   );
 };
