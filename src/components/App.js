@@ -6,6 +6,8 @@ import Rooms from './Rooms';
 import DeleteRoom from './Rooms/DeleteRoom';
 import AddUser from './user';
 import Room from './Rooms/Room';
+import Reserve from './Reserve/Reserve';
+import MyReservations from './MyReservations/MyReservations';
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Rooms />} />
         <Route path="/room/:id" element={<div>Room</div>} />
-        {/* <Route path="/reservations" element={<MyReservations />} /> */}
-        {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
+        <Route path="/reservations" element={<MyReservations />} />
+        <Route path="/reservations/:id" element={<Reserve />} />
         <Route path="/room-new" element={<AddRoom />} />
         <Route path="/room/:id" element={<Room />} />
         {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}

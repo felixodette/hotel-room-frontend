@@ -44,8 +44,8 @@ const MyReservations = () => {
             <img className={styles.img} src={res.room.picture} alt="room" />
             <div className="ms-3 mt-1">
               <h3 className={styles.room}>
-                <span>Room model: </span>
-                <span className="fw-bold">{res.room.model}</span>
+                <span>Room type: </span>
+                <span className="fw-bold">{res.room.type}</span>
               </h3>
               <p>
                 <span>Reservation date: </span>
