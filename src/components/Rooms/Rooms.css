@@ -1,0 +1,20 @@
+.room-card:hover {
+    /* change the background shadow coloe */
+    box-shadow: 0 0 10px 0 #97BF11;
+    /* change the background color */
+    background-color: #f1f1f1;
+}
+
+.room-description {
+    font-size: 1.2rem;
+}
+
+.room-image {
+    width: 250px;
+    height: 250px;
+}
+
+.social-icons:hover {
+    color: #fff;
+    background-color: #000;
+}

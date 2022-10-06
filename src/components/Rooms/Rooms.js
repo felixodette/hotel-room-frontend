@@ -8,13 +8,14 @@ import { BiLeftArrow } from "react-icons/bi";
 import { getRooms } from '../../redux/rooms';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import './Rooms.css';
+import { hover } from '@testing-library/user-event/dist/hover';
 
 const Rooms = () => {
   const dispatch = useDispatch();
   const rooms = useSelector((state) => state.rooms.rooms);
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1200 },
       items: 3
     },
@@ -35,7 +36,6 @@ const Rooms = () => {
   useEffect(() => {
     dispatch(getRooms());
   }, [dispatch]);
-  // change the arrow buttons in the carousel to the BiRightArrow and BiLeftArrow icons with the color ##97BF11
   const CustomRightArrow = ({ onClick, ...rest }) => {
     const {
       onMove,
@@ -75,7 +75,7 @@ const Rooms = () => {
     } = rest;
     return (
       <button
-        className="btn btn-primary"
+        className="btn btn-primary arrows"
         onClick={() => onClick()}
         style={{
           position: "absolute",
@@ -85,7 +85,6 @@ const Rooms = () => {
           zIndex: "1",
           backgroundColor: "#97BF11",
           border: "none",
-          // borderRaduis only from the right side of the button
           borderRadius: "0 50% 50% 0",
           width: "90px",
           height: "60px",
@@ -112,34 +111,35 @@ const Rooms = () => {
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container"
+        containerClass="carousel-container ms-2 me-2 pt-5 pb-5"
         deviceType={responsive.deviceType}
         partialVisible={true}
         swipeable={true}
         showDots={true}
         dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle"
         renderDotsOutside={true}
-        itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px ps-md-2 pe-md-2"
         slidesToSlide={1}
         arrows={true}
         customRightArrow={<CustomRightArrow />}
         customLeftArrow={<CustomLeftArrow />}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         {rooms.map((room) => (
-          <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark">
-            <div className="card h-100 shadow border-0 rounded-3 bg-light text-center p-3 p-md-5 transition" key={room.id}>
-              <img src={room.image} alt={room.name} className="card-img-top rounded-3 mb-3 mb-md-4 mx-auto" style={{ width: '300px', height: '200px' }} />
+          <a href={`/room/${room.id}`} key={room.id} className="text-decoration-none text-dark room-card">
+            <div className="card h-100 shadow border-0 rounded-3 bg-light text-center p-3 p-md-5 transition room-card" key={room.id}>
+              <img src={room.image} alt={room.name} className="card-img-top rounded-3 mb-3 mb-md-4 mx-auto room-image" />
               <div className="card-body">
                 <h3 className="card-title fw-bold fs-5 mb-3 mb-md-4">{room.name}</h3>
-                <p className="card-text fs-6 opacity-50 mb-3 mb-md-4 text-start text-md-center text-lg-start text-xl-center" style={{ fontSize: '1rem' }}>
+                <p className="card-text fs-6 opacity-50 mb-3 mb-md-4 text-start text-md-center text-lg-start text-xl-center room-description">
                   {' '}
                   {room.description}
                 </p>
               </div>
               <div className="card-footer bg-transparent border-0">
-                <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
-                <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
-                <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2" />
+                <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons" />
+                <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons" />
+                <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle mx-2 p-2 social-icons" />
               </div>
             </div>
           </a>
