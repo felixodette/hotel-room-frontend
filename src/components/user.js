@@ -16,7 +16,7 @@ function AddUser() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
     };
-    fetch('http://localhost:3001/api/v1/users', userData)
+    fetch('http://localhost:3000/api/v1/users', userData)
       .then((response) => response.json())
       .then((data) => { localStorage.setItem('id', data.id); localStorage.setItem('name', data.name); })
       .then(setAlert('User created'));
