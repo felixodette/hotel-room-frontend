@@ -9,6 +9,23 @@
   #add-room-form {
     width: 90% !important;
   }
+  #name,
+#description,
+#image,
+#size,
+#view,
+#bedding {
+  height: 30px !important;
+
+}
+::placeholder {
+  font-size: 12px !important;
+}
+
+label {
+  font-size: 14px;
+}
+
 }
 
 #add-room-hr {
@@ -20,6 +37,16 @@
 .bg-transparent-add-room {
   background-color: rgba(151, 191, 17, 0.9);
 }
+
+.bg-transparent-add-room[type=text]:focus{
+  color: black !important;
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.4s;
+}
+.bg-transparent-add-room[type=text]:focus-visible{
+  outline-color: #97bf11 !important;
+}
+
 
 #name,
 #description,
@@ -33,19 +60,30 @@
   height: 35px;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+
+
+::placeholder {
   color: white;
-  opacity: 0.8; /* Firefox */
+  opacity: 0.8;
   font-weight: 200;
   font-size: 14px;
 }
 
-#add-form-btn {
+#add-room-submit-btn {
   border: 0;
   width: 100px;
   height: 40px;
   border-radius: 20px;
   color: #97bf11;
+  transition-duration: 0.4s;
+
+}
+
+#add-room-submit-btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
 }
 
 label {
