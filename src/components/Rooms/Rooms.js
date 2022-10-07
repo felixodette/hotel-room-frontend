@@ -97,7 +97,7 @@ const Rooms = () => {
   };
 
   return (
-    <div>
+    <div className='w-100'>
       <h1 className="text-center mt-5 mb-2 pt-5 fw-bold fs-1">ROOMS</h1>
       <h2 className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5">Please select a Room</h2>
       <Carousel
@@ -113,7 +113,7 @@ const Rooms = () => {
         partialVisible
         swipeable
         showDots
-        dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle"
+        dotListClass="custom-dot-list-style position-absolute top-50 start-50 translate-middle slide-dots"
         renderDotsOutside
         itemClass="carousel-item-padding-40-px ps-md-4 pe-md-2 rounded-5 room-card"
         slidesToSlide={1}

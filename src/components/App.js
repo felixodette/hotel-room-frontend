@@ -11,7 +11,7 @@ function App() {
   return (
     // make the design responsive only for desktop
     <div className="row m-0 p-0">
-      <div className="col-md-2 p-0" style={{ width: '240px' }}>
+      <div className="col-md-2 w-sm-0 p-0" style={{ width: '240px' }}>
         <Nav />
       </div>
       <div className="col-md-10 p-0">
