@@ -14,7 +14,7 @@ describe('DeleteRoom', () => {
   );
 
   test('Test the dom for success rendering elements', () => {
-    const title = screen.getByText(/Action/)
+    const title = screen.getByText(/Action/);
     expect(title).toBeInTheDocument();
   });
 

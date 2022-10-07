@@ -14,7 +14,7 @@ describe('AddRoom', () => {
   );
 
   test('Test the dom for success rendering elements', () => {
-    const title = screen.getByPlaceholderText('Description')
+    const title = screen.getByPlaceholderText('Description');
     expect(title).toBeInTheDocument();
   });
 
