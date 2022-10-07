@@ -4,6 +4,8 @@
   background-size: cover;
   height: 100vh;
 }
+
+
 #add-room-hr {
   width: 50%;
   border-width: 2px;
@@ -15,5 +17,11 @@
 #name, #description, #image, #size, #view, #bedding {
 border: 2px solid white;
 padding-left: 15px;
-height: 35px;}
+height: 40px;}
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 0.8; /* Firefox */
+  font-weight: 200;
+  font-size: 14px;
+}

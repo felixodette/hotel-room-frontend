@@ -56,7 +56,7 @@ function AddRoom() {
         className="col-md-6 d-flex align-items-center flex-column justify-content-center"
         onSubmit={submitRoom}
       >
-        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center mb-3">
           <label htmlFor="name" className="text-white  col-12">
             Room Name:
             {' '}
@@ -73,7 +73,7 @@ function AddRoom() {
           </label>
 
         </div>
-        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center mb-3">
           <label htmlFor="description" className="text-white col-12">
             Room Description:
             {' '}
@@ -91,7 +91,7 @@ function AddRoom() {
           </label>
 
         </div>
-        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center mb-3">
           <label htmlFor="image" className="text-white col-12">
             Room Image:
             {' '}
@@ -108,7 +108,7 @@ function AddRoom() {
           </label>
 
         </div>
-        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center mb-3">
           <label htmlFor="size" className="text-white col-12">
             Room Size:
             {' '}
@@ -125,7 +125,7 @@ function AddRoom() {
           </label>
 
         </div>
-        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center mb-3">
           <label htmlFor="view" className="text-white col-12">
             Room View:
             {' '}
@@ -141,7 +141,7 @@ function AddRoom() {
             />
           </label>
         </div>
-        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center mb-3">
           <label htmlFor="bedding" className="text-white col-12">
             Bedding Option:
             {' '}

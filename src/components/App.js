@@ -9,11 +9,12 @@ import Nav from './Nav';
 
 function App() {
   return (
-    <div className="row">
-      <div className="col-3">
+    // make the design responsive only for desktop
+    <div className="row m-0 p-0">
+      <div className="col-md-2 w-sm-0 p-0" style={{ width: '240px' }}>
         <Nav />
       </div>
-      <div className="col-9">
+      <div className="col-md-10 p-0">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Rooms />} />
