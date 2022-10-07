@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import Rooms from '../Rooms/Rooms';
-// import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import store from '../../redux/configureStore';
 
@@ -32,6 +32,18 @@ describe('Rooms', () => {
             </Provider>
         );
         expect(container).toMatchSnapshot();
+    }
+    );
+
+    test('It renders the Rooms component correctly', () => {
+        const tree = renderer
+            .create(
+                <Provider store={store}>
+                    <Rooms />
+                </Provider>
+            )
+            .toJSON();
+        expect(tree).toMatchSnapshot();
     }
     );
 });
