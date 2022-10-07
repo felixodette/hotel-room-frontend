@@ -1,0 +1,17 @@
+.room-card:hover {
+  box-shadow: 0 0 10px 0 #96bf1165;
+}
+
+.room-description {
+  font-size: 1rem;
+}
+
+.room-image {
+  width: 250px;
+  height: 250px;
+}
+
+.social-icons:hover {
+  color: #fff;
+  background-color: #000;
+}
