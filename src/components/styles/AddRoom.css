@@ -1,0 +1,53 @@
+#add-room-container {
+  min-height: 100%;
+  background: linear-gradient(0deg, rgba(151, 191, 17, 0.8), rgba(151, 191, 17, 0.8)), url("https://cache.marriott.com/content/dam/marriott-renditions/BJVEB/bjveb-suite-0236-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*");
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  #add-room-form {
+    width: 90% !important;
+  }
+}
+
+#add-room-hr {
+  width: 50%;
+  border-width: 2px;
+  border-color: white;
+}
+
+.bg-transparent-add-room {
+  background-color: rgba(151, 191, 17, 0.9);
+}
+
+#name,
+#description,
+#image,
+#size,
+#view,
+#bedding {
+  border: 2px solid white;
+  padding-left: 15px;
+  color: white;
+  height: 35px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 0.8; /* Firefox */
+  font-weight: 200;
+  font-size: 14px;
+}
+
+#add-form-btn {
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: #97bf11;
+}
+
+label {
+  width: 100%;
+}

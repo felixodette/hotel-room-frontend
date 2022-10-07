@@ -28,7 +28,7 @@ const Nav = () => (
         </div>
 
       </div>
-      <div className="card-footer bg-transparent border-0 fixed-bottom">
+      <div className="card-footer bg-transparent border-0 fixed-bottom w-25">
         <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
         <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
         <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2" />
