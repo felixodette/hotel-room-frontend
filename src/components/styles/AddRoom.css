@@ -17,11 +17,19 @@
 #name, #description, #image, #size, #view, #bedding {
 border: 2px solid white;
 padding-left: 15px;
-height: 40px;}
+color: white;
+height: 35px;}
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
   opacity: 0.8; /* Firefox */
   font-weight: 200;
   font-size: 14px;
+}
+#add-form-btn{
+border: 0;
+width: 100px;
+height: 40px;
+border-radius: 20px;
+color: #97bf11;
 }

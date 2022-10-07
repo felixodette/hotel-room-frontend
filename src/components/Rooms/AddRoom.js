@@ -117,7 +117,7 @@ function AddRoom() {
               id="size"
               className="col-12 bg-transparent-add-room rounded"
               type="text"
-              placeholder="In squaremeter"
+              placeholder="In square meter"
               value={size}
               onChange={(e) => setSize(e.target.value)}
               required
@@ -158,8 +158,8 @@ function AddRoom() {
           </label>
 
         </div>
-        <button type="submit">
-          Add
+        <button type="submit" id="add-form-btn">
+          Submit
         </button>
       </form>
       <span>
