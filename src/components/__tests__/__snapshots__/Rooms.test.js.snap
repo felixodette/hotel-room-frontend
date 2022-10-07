@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rooms It renders the Rooms component correctly 1`] = `
+<div>
+  <div
+    class="w-100"
+  >
+    <h1
+      class="text-center mt-5 mb-2 pt-5 fw-bold fs-1"
+    >
+      ROOMS
+    </h1>
+    <h2
+      class="text-center mt-2 mb-5 fw-bold opacity-50 fs-5"
+    >
+      Please select a Room
+    </h2>
+    <div
+      class="react-multi-carousel-list carousel-container ms-2 me-2 pt-5 pb-5 "
+      dir="ltr"
+    >
+      <ul
+        class="react-multi-carousel-track "
+        style="transition: none; overflow: unset; transform: translate3d(0px,0,0);"
+      />
+    </div>
+    ;
+  </div>
+</div>
+`;
+
+exports[`Rooms It renders the Rooms component correctly 2`] = `
+<div
+  className="w-100"
+>
+  <h1
+    className="text-center mt-5 mb-2 pt-5 fw-bold fs-1"
+  >
+    ROOMS
+  </h1>
+  <h2
+    className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5"
+  >
+    Please select a Room
+  </h2>
+  <div
+    className="react-multi-carousel-list carousel-container ms-2 me-2 pt-5 pb-5 "
+    dir="ltr"
+  >
+    <ul
+      className="react-multi-carousel-track "
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "overflow": "unset",
+          "transform": "translate3d(0px,0,0)",
+          "transition": "none",
+        }
+      }
+    />
+  </div>
+  ;
+</div>
+`;
