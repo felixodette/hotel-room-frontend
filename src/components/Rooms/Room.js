@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const Room = () => {
   const [roomDetails, setRoomDetails] = useState('');
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const roomData = {
@@ -15,9 +16,13 @@ const Room = () => {
       .then((data) => setRoomDetails(data));
   }, []);
 
+  const navigateToReserve = () => {
+    navigate('/reservations-new');
+  };
+
   return (
     <div>
-      <button type="button">Reserve</button>
+      <button type="button" onClick={navigateToReserve}>Reserve</button>
       <h1>
         {' '}
         Room name:
