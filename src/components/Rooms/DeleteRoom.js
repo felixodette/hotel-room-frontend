@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRooms, deleteRoom } from '../../redux/rooms';
+import '../styles/DeleteRoom.css';
 
 const DeleteRoom = () => {
   const dispatch = useDispatch();
@@ -20,21 +21,41 @@ const DeleteRoom = () => {
     dispatch(getRooms());
   }, [dispatch]);
   return (
-    <div>
-      <h1>Rooms</h1>
-      <div className="rooms">
-        {rooms.map((room) => (
-          <div className="room" key={room.id}>
-            <h3>{room.name}</h3>
-            <button
-              type="button"
-              onClick={() => deleteRoomHandler(room.id)}
-            >
-              Delete
-            </button>
-          </div>
-        ))}
-      </div>
+    <div id="delete-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5">
+      <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-1 text-white text-uppercase">Delete Room</h2>
+      <hr id="add-room-hr" />
+      <p className="text-center  fs-6 text-white">
+        Would you like to delete your hotel room from our website?
+        {' '}
+        <br />
+        You can do it with one click!
+      </p>
+      <table className="table w-50 table-hover" id="delete-room-table">
+        <thead>
+          <tr>
+            <th scope="col" className="text-white">Room Name</th>
+            <th scope="col" className="text-center text-white">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rooms.map((room) => (
+            <tr className="room" key={room.id}>
+              <td><p className="text-white mt-3" id="room-name">{room.name}</p></td>
+              <td className="text-center">
+                <button
+                  id="delete-room-btn"
+                  className="mt-2"
+                  type="button"
+                  onClick={() => deleteRoomHandler(room.id)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+
+      </table>
     </div>
   );
 };
