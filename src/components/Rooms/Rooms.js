@@ -118,8 +118,8 @@ const Rooms = () => {
         itemClass="carousel-item-padding-40-px ps-md-4 pe-md-2 rounded-5 room-card"
         slidesToSlide={1}
         arrows
-        customRightArrow={<CustomRightArrow />}
-        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow onClick={() => {}} />}
+        customLeftArrow={<CustomLeftArrow onClick={() => {}} />}
         removeArrowOnDeviceType={['tablet', 'mobile']}
       >
         {rooms.map((room) => (
