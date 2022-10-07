@@ -39,9 +39,9 @@ function AddRoom() {
     setInterval(() => { setMessage(''); }, 3000);
   };
   return (
-    <div id="add-room-container" className="container-fluid d-flex flex-column justify-content-center align-items-center">
-      <h2 id="add-room-heading" className="text-center mt-0 mb-0 fw-bold fs-1 text-white text-uppercase">Add Room</h2>
-      <hr id="add-room-hr" className="border border-white" />
+    <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center">
+      <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-1 text-white text-uppercase">Add Room</h2>
+      <hr id="add-room-hr" />
       <p className="text-center  fs-6 text-white">
         Would you like to rent your hotel room to our website?
         {' '}
@@ -52,13 +52,18 @@ function AddRoom() {
         And start earn some money today!
       </p>
       <form
+        id="add-room-form"
+        className="col-md-6 d-flex align-items-center flex-column justify-content-center"
         onSubmit={submitRoom}
       >
-        <div>
-          <label htmlFor="name">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+          <label htmlFor="name" className="text-white  col-12">
             Room Name:
+            {' '}
+            <br />
             <input
               id="name"
+              className="col-12 bg-transparent-add-room rounded"
               type="text"
               placeholder="Deluxe Double Room"
               value={name}
@@ -68,25 +73,32 @@ function AddRoom() {
           </label>
 
         </div>
-        <div>
-          <label htmlFor="description">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+          <label htmlFor="description" className="text-white col-12">
             Room Description:
+            {' '}
+            <br />
             <input
               id="description"
+              className="col-12 bg-transparent-add-room rounded"
               type="text"
               placeholder="Description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               required
+
             />
           </label>
 
         </div>
-        <div>
-          <label htmlFor="image">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+          <label htmlFor="image" className="text-white col-12">
             Room Image:
+            {' '}
+            <br />
             <input
               id="image"
+              className="col-12 bg-transparent-add-room rounded"
               type="text"
               placeholder="Image URL"
               value={image}
@@ -96,11 +108,14 @@ function AddRoom() {
           </label>
 
         </div>
-        <div>
-          <label htmlFor="size">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+          <label htmlFor="size" className="text-white col-12">
             Room Size:
+            {' '}
+            <br />
             <input
               id="size"
+              className="col-12 bg-transparent-add-room rounded"
               type="text"
               placeholder="In squaremeter"
               value={size}
@@ -110,11 +125,14 @@ function AddRoom() {
           </label>
 
         </div>
-        <div>
-          <label htmlFor="view">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+          <label htmlFor="view" className="text-white col-12">
             Room View:
+            {' '}
+            <br />
             <input
               id="view"
+              className="col-12 bg-transparent-add-room rounded"
               type="text"
               placeholder="Sea, ocean.."
               value={view}
@@ -122,13 +140,15 @@ function AddRoom() {
               required
             />
           </label>
-
         </div>
-        <div>
-          <label htmlFor="bedding">
+        <div className="col-10 d-flex align-items-center flex-column justify-content-center">
+          <label htmlFor="bedding" className="text-white col-12">
             Bedding Option:
+            {' '}
+            <br />
             <input
               id="bedding"
+              className="col-12 bg-transparent-add-room rounded"
               type="text"
               placeholder="Double, triple, twin..."
               value={bedding}
