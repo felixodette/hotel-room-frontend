@@ -17,4 +17,9 @@ describe('Rooms', () => {
         expect(title).toBeInTheDocument();
         }
     );
+    test('Test the dom for non existing element on the page', () => {
+        const title = screen.queryByText('example');
+        expect(title).not.toBeInTheDocument();
+        }
+    );
 });
