@@ -40,17 +40,27 @@ function AddRoom() {
   };
   return (
     <div id="add-room-container" className="container-fluid d-flex flex-column justify-content-center align-items-center">
-      <h2>Add Room</h2>
+      <h2 id="add-room-heading" className="text-center mt-0 mb-0 fw-bold fs-1 text-white text-uppercase">Add Room</h2>
+      <hr id="add-room-hr" className="border border-white" />
+      <p className="text-center  fs-6 text-white">
+        Would you like to rent your hotel room to our website?
+        {' '}
+        <br />
+        No need to wait. Fill the forms below your room will be added to our website accordingly!
+        {' '}
+        <br />
+        And start earn some money today!
+      </p>
       <form
         onSubmit={submitRoom}
       >
         <div>
           <label htmlFor="name">
-            Name:
+            Room Name:
             <input
               id="name"
               type="text"
-              placeholder="Name"
+              placeholder="Deluxe Double Room"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
