@@ -9,23 +9,23 @@
   #add-room-form {
     width: 90% !important;
   }
+
   #name,
-#description,
-#image,
-#size,
-#view,
-#bedding {
-  height: 30px !important;
+  #description,
+  #image,
+  #size,
+  #view,
+  #bedding {
+    height: 30px !important;
+  }
 
-}
-::placeholder {
-  font-size: 12px !important;
-}
+  ::placeholder {
+    font-size: 12px !important;
+  }
 
-label {
-  font-size: 14px;
-}
-
+  label {
+    font-size: 14px;
+  }
 }
 
 #add-room-hr {
@@ -38,15 +38,15 @@ label {
   background-color: rgba(151, 191, 17, 0.9);
 }
 
-.bg-transparent-add-room[type=text]:focus{
+.bg-transparent-add-room[type=text]:focus {
   color: black !important;
   background-color: rgb(255, 255, 255);
   transition-duration: 0.4s;
 }
-.bg-transparent-add-room[type=text]:focus-visible{
+
+.bg-transparent-add-room[type=text]:focus-visible {
   outline-color: #97bf11 !important;
 }
-
 
 #name,
 #description,
@@ -59,9 +59,6 @@ label {
   color: white;
   height: 35px;
 }
-
-
-
 
 ::placeholder {
   color: white;
@@ -77,7 +74,6 @@ label {
   border-radius: 20px;
   color: #97bf11;
   transition-duration: 0.4s;
-
 }
 
 #add-room-submit-btn:hover {

@@ -12,7 +12,6 @@
   border-radius: 20px;
   color: #97bf11;
   transition-duration: 0.4s;
-
 }
 
 #delete-room-btn:hover {
@@ -22,8 +21,7 @@
 }
 
 @media (max-width: 768px) {
-#delete-room-table {
-  width: 100% !important;
+  #delete-room-table {
+    width: 100% !important;
+  }
 }
-}
-
