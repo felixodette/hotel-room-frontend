@@ -39,7 +39,7 @@ function AddRoom() {
     setInterval(() => { setMessage(''); }, 3000);
   };
   return (
-    <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center">
+    <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5">
       <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-1 text-white text-uppercase">Add Room</h2>
       <hr id="add-room-hr" />
       <p className="text-center  fs-6 text-white">
@@ -53,10 +53,10 @@ function AddRoom() {
       </p>
       <form
         id="add-room-form"
-        className="col-md-6 col-sm-12 d-flex align-items-center flex-column justify-content-center"
+        className="col-md-6 d-flex align-items-center flex-column justify-content-center"
         onSubmit={submitRoom}
       >
-        <label htmlFor="name" className="text-white  col-md-8 col-sm-12 mb-3">
+        <label htmlFor="name" className="text-white  col-md-8 mb-3">
           Room Name:
           {' '}
           <br />
@@ -71,7 +71,7 @@ function AddRoom() {
           />
         </label>
 
-        <label htmlFor="description" className="text-white  col-md-8 col-sm-12 mb-3">
+        <label htmlFor="description" className="text-white  col-md-8 mb-3">
           Room Description:
           {' '}
           <br />
@@ -86,7 +86,7 @@ function AddRoom() {
           />
         </label>
 
-        <label htmlFor="image" className="text-white  col-md-8 col-sm-12 mb-3">
+        <label htmlFor="image" className="text-white  col-md-8 mb-3">
           Room Image:
           {' '}
           <br />
@@ -101,7 +101,7 @@ function AddRoom() {
           />
         </label>
 
-        <label htmlFor="size" className="text-white  col-md-8 col-sm-12 mb-3">
+        <label htmlFor="size" className="text-white  col-md-8 mb-3">
           Room Size:
           {' '}
           <br />
@@ -116,7 +116,7 @@ function AddRoom() {
           />
         </label>
 
-        <label htmlFor="view" className="text-white  col-md-8 col-sm-12 mb-3">
+        <label htmlFor="view" className="text-white  col-md-8 mb-3">
           Room View:
           {' '}
           <br />
@@ -130,7 +130,7 @@ function AddRoom() {
             required
           />
         </label>
-        <label htmlFor="bedding" className="text-white  col-md-8 col-sm-12 mb-3">
+        <label htmlFor="bedding" className="text-white  col-md-8 mb-3">
           Bedding Option:
           {' '}
           <br />

@@ -5,7 +5,11 @@
   height: 100vh;
 }
 
-
+@media (max-width: 768px) {
+#add-room-form {
+width: 90% !important;
+}
+}
 #add-room-hr {
   width: 50%;
   border-width: 2px;
@@ -32,4 +36,7 @@ width: 100px;
 height: 40px;
 border-radius: 20px;
 color: #97bf11;
+}
+label {
+  width: 100%;
 }
