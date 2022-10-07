@@ -14,7 +14,7 @@ function App() {
       <div className="col-md-2 w-sm-0 p-0" style={{ width: '240px' }}>
         <Nav />
       </div>
-      <div className="col-md-10 p-0">
+      <div className="col-md-10 p-0 vh-100">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Rooms />} />
