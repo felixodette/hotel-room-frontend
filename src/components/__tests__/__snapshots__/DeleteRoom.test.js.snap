@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteRoom It renders the Rooms component correctly 1`] = `
+<div>
+  <div
+    class="container-fluid d-flex flex-column align-items-center h-100 mb-5"
+    id="delete-room-container"
+  >
+    <h2
+      class="text-center  mt-5 fw-bold fs-1 text-white text-uppercase"
+      id="add-room-heading"
+    >
+      Delete Room
+    </h2>
+    <hr
+      id="add-room-hr"
+    />
+    <p
+      class="text-center  fs-6 text-white"
+    >
+      Would you like to delete your hotel room from our website?
+       
+      <br />
+      You can do it with one click!
+    </p>
+    <table
+      class="table w-50 table-hover"
+      id="delete-room-table"
+    >
+      <thead>
+        <tr>
+          <th
+            class="text-white"
+            scope="col"
+          >
+            Room Name
+          </th>
+          <th
+            class="text-center text-white"
+            scope="col"
+          >
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`DeleteRoom It renders the Rooms component correctly 2`] = `
+<div
+  className="container-fluid d-flex flex-column align-items-center h-100 mb-5"
+  id="delete-room-container"
+>
+  <h2
+    className="text-center  mt-5 fw-bold fs-1 text-white text-uppercase"
+    id="add-room-heading"
+  >
+    Delete Room
+  </h2>
+  <hr
+    id="add-room-hr"
+  />
+  <p
+    className="text-center  fs-6 text-white"
+  >
+    Would you like to delete your hotel room from our website?
+     
+    <br />
+    You can do it with one click!
+  </p>
+  <table
+    className="table w-50 table-hover"
+    id="delete-room-table"
+  >
+    <thead>
+      <tr>
+        <th
+          className="text-white"
+          scope="col"
+        >
+          Room Name
+        </th>
+        <th
+          className="text-center text-white"
+          scope="col"
+        >
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
