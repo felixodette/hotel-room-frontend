@@ -144,7 +144,7 @@ function AddRoom() {
             required
           />
         </label>
-        <button type="submit" id="add-form-btn">
+        <button type="submit" className="fw-bold" id="add-room-submit-btn">
           Submit
         </button>
 
