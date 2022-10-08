@@ -13,6 +13,10 @@ body {
   main {
     padding-left: 240px;
   }
+
+  .sidebar {
+    width: 100%;
+  }
 }
 
 /* Sidebar */
@@ -24,12 +28,6 @@ body {
   padding: 58px 0 0; /* Height of navbar */
   width: 240px;
   z-index: 600;
-}
-
-@media (max-width: 991.98px) {
-  .sidebar {
-    width: 100%;
-  }
 }
 
 .sidebar .active {
