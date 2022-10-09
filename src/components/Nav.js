@@ -53,8 +53,7 @@ const Nav = () => (
 
         <a className="navbar-brand" href="/">
           <img
-            src=""
-            height="25"
+            src="https://res.cloudinary.com/wonderwoman/image/upload/v1665273260/3D_gold_crown_logo_-_Made_with_PosterMyWall_n1vleo.png"
             alt="Logo"
             loading="lazy"
           />

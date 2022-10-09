@@ -58,3 +58,8 @@ nav {
 .card-footer {
   padding: 2%;
 }
+
+.navbar-brand img {
+  height: 4rem;
+  padding-left: 3rem;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import '../styles/Room.css';
 
 const Room = () => {
   const [roomDetails, setRoomDetails] = useState('');
@@ -21,8 +22,19 @@ const Room = () => {
   };
 
   return (
-    <div>
-      <button type="button" onClick={navigateToReserve}>Reserve</button>
+    <div className="row">
+      <div className="col-md-6">
+        <img src={roomDetails.image} alt="room" className="room-image" />
+      </div>
+      <div className="col-md-6">
+        <h2 className="room-name">{roomDetails.name}</h2>
+        <p className="room-description">{roomDetails.description}</p>
+        <p className="room-size">{roomDetails.size}</p>
+        <p className="room-view">{roomDetails.view}</p>
+        <p className="room-bedding">{roomDetails.bedding}</p>
+        <button type="button" className="btn btn-primary" onClick={navigateToReserve}>Reserve</button>
+      </div>
+      {/* <button type="button" onClick={navigateToReserve}>Reserve</button>
       <h1>
         {' '}
         Room name:
@@ -55,7 +67,7 @@ const Room = () => {
         Room bedding:
         {roomDetails.bedding}
         {' '}
-      </h1>
+      </h1> */}
     </div>
   );
 };
