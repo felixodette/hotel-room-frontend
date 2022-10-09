@@ -1,0 +1,46 @@
+.room-div {
+  padding: 5rem 0 0 1.5rem;
+  overflow: hidden;
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-details {
+  padding: 1rem;
+}
+
+.room-name {
+  text-align: end;
+  padding: 0 0 1rem 0;
+}
+
+.room-data :nth-child(2n+0) {
+  background-color: #fff;
+}
+
+.room-data p {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(232, 229, 229);
+  padding: 0.5rem;
+}
+
+.reserve-btn {
+  padding: 25% 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.reserve-btn button {
+  background-color: #97bf11;
+  color: #fff;
+  border-radius: 40%;
+  font-size: 24px;
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
