@@ -67,6 +67,7 @@ function AddRoom() {
             placeholder="Deluxe Double Room"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            maxLength="50"
             required
           />
         </label>
@@ -82,6 +83,7 @@ function AddRoom() {
             placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            minLength="10"
             required
           />
         </label>
@@ -93,7 +95,7 @@ function AddRoom() {
           <input
             id="image"
             className="col-12 bg-transparent-add-room rounded"
-            type="text"
+            type="url"
             placeholder="Image URL"
             value={image}
             onChange={(e) => setImage(e.target.value)}
@@ -108,7 +110,7 @@ function AddRoom() {
           <input
             id="size"
             className="col-12 bg-transparent-add-room rounded"
-            type="text"
+            type="number"
             placeholder="In square meter"
             value={size}
             onChange={(e) => setSize(e.target.value)}
