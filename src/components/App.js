@@ -6,6 +6,8 @@ import DeleteRoom from './Rooms/DeleteRoom';
 import AddUser from './user';
 import Room from './Rooms/Room';
 import Nav from './Nav';
+import ReservationForm from '../pages/ReservationsForm';
+import Reservations from './Reservations/Reservation';
 
 function App() {
   return (
@@ -18,8 +20,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Rooms />} />
-            {/* <Route path="/reservations" element={<MyReservations />} /> */}
-            {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/reservations-new" element={<ReservationForm />} />
             <Route path="/room-new" element={<AddRoom />} />
             <Route path="/room/:id" element={<Room />} />
             {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
