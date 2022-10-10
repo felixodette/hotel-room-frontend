@@ -20,10 +20,13 @@ const Nav = () => (
             <span>Delete Room</span>
           </a>
           <a href="/user" className="list-group-item list-group-item-action py-2 ripple">
-            <span>Add User</span>
+            <span>Login</span>
           </a>
           <a href="/reservations-new" className="list-group-item list-group-item-action py-2 ripple">
             <span>Make Reservations</span>
+          </a>
+          <a href="/reservations" className="list-group-item list-group-item-action py-2 ripple">
+            <span>My Reservations</span>
           </a>
         </div>
 
