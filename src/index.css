@@ -51,10 +51,6 @@ body {
   border: none;
 }
 
-nav {
-  border-right: solid 1px #e3e3e3;
-}
-
 .card-footer {
   padding: 2%;
 }
