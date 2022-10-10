@@ -57,9 +57,14 @@
   border-radius: 0 50% 50% 0;
   width: 80px;
   height: 60px;
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
   font-weight: bold;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   background-color: #97bf11;
+}
+
+.back-arrow button:hover {
+  background-color: #97bf11;
+  color: #fff;
 }

@@ -29,6 +29,9 @@ const Room = () => {
       navigateToReserve();
     }
   };
+  const backBtn = () => {
+    navigate('/');
+  };
 
   return (
     <div className="row room-div">
@@ -68,6 +71,7 @@ const Room = () => {
         <button
           type="button"
           className="btn"
+          onClick={backBtn}
         >
           <BiLeftArrow />
         </button>
