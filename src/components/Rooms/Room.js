@@ -64,7 +64,7 @@ const Room = () => {
           </div>
         </div>
       </div>
-      <div className="back-arrow">
+      <div className="back-arrow fixed-bottom">
         <button
           type="button"
           className="btn"
