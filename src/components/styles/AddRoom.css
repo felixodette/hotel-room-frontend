@@ -85,3 +85,8 @@
 label {
   width: 100%;
 }
+
+/* Form Notifications */
+.add-room-success-notification {
+  color: #97bf11;
+}

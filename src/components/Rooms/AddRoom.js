@@ -21,14 +21,21 @@ function AddRoom() {
       bedding,
     };
 
+    function notify(response) {
+      if (response === 201) {
+        setMessage(<div className="add-room-success-notification border mt-1 bg-dark rounded p-1">Room successfully created!</div>);
+      } else {
+        setMessage(<div className="add-room-error-notification border mt-1 bg-dark text-danger rounded p-1">ERROR: Room could not be created!</div>);
+      }
+    }
+
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(room),
     };
     fetch('http://localhost:3000/api/v1/rooms/', requestOptions)
-      .then((response) => response.json())
-      .then(setMessage('Room created'));
+      .then((response) => notify(response.status));
 
     setName('');
     setDescription('');
@@ -36,7 +43,7 @@ function AddRoom() {
     setSize('');
     setView('');
     setBedding('');
-    setInterval(() => { setMessage(''); }, 3000);
+    setInterval(() => { setMessage(''); }, 5000);
   };
   return (
     <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5">
@@ -151,7 +158,7 @@ function AddRoom() {
         </button>
 
       </form>
-      <span>
+      <span className="">
         {message}
       </span>
     </div>
