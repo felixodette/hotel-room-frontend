@@ -87,7 +87,7 @@ function AddRoom() {
             id="description"
             className="col-12 bg-transparent-add-room rounded"
             type="text"
-            placeholder="Description"
+            placeholder="Sleep soundly in Bodrum on the indulgent bedding..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             minLength="10"
@@ -103,7 +103,7 @@ function AddRoom() {
             id="image"
             className="col-12 bg-transparent-add-room rounded"
             type="url"
-            placeholder="Image URL"
+            placeholder="https://images.hotels.com/photos/5472270/"
             value={image}
             onChange={(e) => setImage(e.target.value)}
             required
@@ -111,14 +111,14 @@ function AddRoom() {
         </label>
 
         <label htmlFor="size" className="text-white  col-md-8 mb-3">
-          Room Size:
+          Room Size in m2:
           {' '}
           <br />
           <input
             id="size"
             className="col-12 bg-transparent-add-room rounded"
             type="number"
-            placeholder="In square meter"
+            placeholder="45"
             value={size}
             onChange={(e) => setSize(e.target.value)}
             required
@@ -133,7 +133,7 @@ function AddRoom() {
             id="view"
             className="col-12 bg-transparent-add-room rounded"
             type="text"
-            placeholder="Sea, ocean.."
+            placeholder="Sea, city, dessert.."
             value={view}
             onChange={(e) => setView(e.target.value)}
             required
