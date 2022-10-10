@@ -50,7 +50,7 @@ const Room = () => {
             <span>{roomDetails.bedding}</span>
           </p>
           <div className="reserve-btn">
-            <button type="button" className="btn" onClick={navigateToReserve}>
+            <button type="button" className="fw-bold" onClick={navigateToReserve}>
               Reserve
               <span><IoIosArrowDropright /></span>
             </button>

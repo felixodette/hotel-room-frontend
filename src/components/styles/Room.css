@@ -38,11 +38,14 @@
 .reserve-btn button {
   background-color: #97bf11;
   color: #fff;
-  border-radius: 40%;
+  border-radius: 20px;
   font-size: 24px;
   width: 12rem;
   display: flex;
   justify-content: space-between;
+  height: 40px;
+  transition-duration: 0.4s;
+  padding: 0 7px;
 }
 
 .back-arrow {
