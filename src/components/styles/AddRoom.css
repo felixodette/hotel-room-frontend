@@ -85,3 +85,22 @@
 label {
   width: 100%;
 }
+
+/* Form Notifications */
+.add-room-success-notification {
+  color: #97bf11;
+}
+
+/* Hide input number increment buttons */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
