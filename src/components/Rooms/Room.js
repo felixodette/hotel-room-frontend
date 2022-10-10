@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/Room.css';
 import { IoIosArrowDropright } from 'react-icons/io';
+import { BiLeftArrow } from 'react-icons/bi';
 
 const Room = () => {
   const [roomDetails, setRoomDetails] = useState('');
@@ -55,6 +56,14 @@ const Room = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="back-arrow">
+        <button
+          type="button"
+          className="btn"
+        >
+          <BiLeftArrow />
+        </button>
       </div>
     </div>
   );
