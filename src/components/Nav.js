@@ -32,9 +32,24 @@ const Nav = () => (
 
       </div>
       <div className="card-footer bg-transparent border-0 fixed-bottom w-25">
-        <GrFacebookOption className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
-        <FaTwitter className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2" />
-        <AiFillLinkedin className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2" />
+        <GrFacebookOption
+          onClick={() => {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank');
+          }}
+          className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons"
+        />
+        <FaTwitter
+          onClick={() => {
+            window.open(`https://twitter.com/intent/tweet?url=${window.location.href}`, '_blank');
+          }}
+          className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle p-2 mx-2 social-icons"
+        />
+        <AiFillLinkedin
+          onClick={() => {
+            window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`, '_blank');
+          }}
+          className="fs-1 opacity-50 mb-3 mb-md-4 border border-2 border-dark rounded-circle mx-2 p-2 social-icons"
+        />
       </div>
     </nav>
 
