@@ -22,6 +22,13 @@ const Room = () => {
   const navigateToReserve = () => {
     navigate('/reservations-new');
   };
+  const userLogin = () => {
+    if (localStorage.getItem('id') === null) {
+      navigate('/user');
+    } else {
+      navigateToReserve();
+    }
+  };
 
   return (
     <div className="row room-div">
@@ -50,7 +57,7 @@ const Room = () => {
             <span>{roomDetails.bedding}</span>
           </p>
           <div className="reserve-btn">
-            <button type="button" className="fw-bold" onClick={navigateToReserve}>
+            <button type="button" className="fw-bold" onClick={userLogin}>
               Reserve
               <span><IoIosArrowDropright /></span>
             </button>
