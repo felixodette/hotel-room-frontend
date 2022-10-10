@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import '../styles/Room.css';
+// import '../styles/Room.css';
 
 const Room = () => {
   const [roomDetails, setRoomDetails] = useState('');
