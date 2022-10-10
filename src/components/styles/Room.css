@@ -19,7 +19,7 @@
 }
 
 .room-data :nth-child(2n+0) {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .room-data p {
