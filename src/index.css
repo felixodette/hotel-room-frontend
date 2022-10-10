@@ -54,3 +54,7 @@ body {
   height: 4rem;
   padding-left: 3rem;
 }
+
+.navbar-brand {
+  padding-top: 1rem;
+}
