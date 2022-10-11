@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRooms, deleteRoom } from '../../redux/rooms';
 import '../styles/DeleteRoom.css';
@@ -6,6 +6,16 @@ import '../styles/DeleteRoom.css';
 const DeleteRoom = () => {
   const dispatch = useDispatch();
   const rooms = useSelector((state) => state.rooms.rooms);
+  const [message, setMessage] = useState('');
+
+  const checkResponse = (response, id) => {
+    if (response === 204) {
+      dispatch(deleteRoom(id));
+    } else {
+      setMessage(<div className="add-room-error-notification border mt-1 py-1 px-2 bg-dark text-danger rounded p-1">ERROR: Reserved rooms can`t be deleted</div>);
+    }
+  };
+  setInterval(() => { setMessage(''); }, 5000);
 
   const deleteRoomHandler = (id) => {
     const requestOptions = {
@@ -14,7 +24,7 @@ const DeleteRoom = () => {
     };
 
     fetch(`http://localhost:3000/api/v1/rooms/${id}`, requestOptions)
-      .then(dispatch(deleteRoom(id)));
+      .then((response) => checkResponse(response.status, id));
   };
 
   useEffect(() => {
@@ -30,6 +40,9 @@ const DeleteRoom = () => {
         <br />
         You can do it with one click!
       </p>
+      <div>
+        {message}
+      </div>
       <table className="table w-50 table-hover" id="delete-room-table">
         <thead>
           <tr>
