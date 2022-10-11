@@ -6,13 +6,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
 import { createReservationApi } from '../redux/reservations/reservations';
-import { fetchHotelApi } from '../redux/rooms';
+import { getRooms } from '../redux/rooms';
 import Nav from '../components/Nav';
 
 const ReserveForm = () => {
   const location = useLocation();
   const { state } = location;
-  const doctors = useSelector((state) => state.roomsReducer);
+  const rooms = useSelector((state) => state.roomsReducer);
   const user = useSelector((state) => state.signUpReducer);
   const { accessToken } = user;
 
@@ -24,7 +24,7 @@ const ReserveForm = () => {
   const [errorNotice, setErrorNotice] = useState(false);
 
   useEffect(() => {
-    dispatch(fetchHotelApi(accessToken));
+    dispatch(getRooms(accessToken));
   }, [dispatch]);
 
   const flashNotices = (type) => {
@@ -51,7 +51,7 @@ const ReserveForm = () => {
       flashNotices('error');
       return;
     }
-    const room = room.find((item) => item.id == roomId);
+    const room = rooms.find((item) => item.id == roomId);
     const data = {
       city,
       date,
@@ -102,12 +102,12 @@ const ReserveForm = () => {
 
             <select
               name="availableDoctors"
-              onChange={(e) => setDoctorId(e.target.value)}
+              onChange={(e) => setRoomId(e.target.value)}
               className="lg:ml-3 lg:mr-5 p-3 bg-lime-500 rounded-lg outline outline-offset-2 outline-3"
             >
               {state && <option value={state.id} defaultValue>{state.name}</option>}
               {!state && <option value="" defaultValue>Choose a Room</option>}
-              {!state && doctors.map((item) => (
+              {!state && rooms.map((item) => (
                 <option key={item.id} value={item.id}>{item.name}</option>
               ))}
             </select>
