@@ -26,7 +26,7 @@ describe('Sidebar Navigation', () => {
     expect(price).not.toBeInTheDocument();
   });
 
-  test('It correctly renders a Nav component', () => {
+  test('It correctly renders a nav component', () => {
     const { container } = render(
       <Provider store={store}>
         <Router>
@@ -35,5 +35,18 @@ describe('Sidebar Navigation', () => {
       </Provider>,
     );
     expect(container).toMatchSnapshot();
+  });
+
+  test('It renders the Nav correctly', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <Router>
+            <Nav />
+          </Router>
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
