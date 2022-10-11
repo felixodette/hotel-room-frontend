@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-// import '../styles/Room.css';
+import '../styles/Room.css';
+import { IoIosArrowDropright } from 'react-icons/io';
+import { BiLeftArrow } from 'react-icons/bi';
 
 const Room = () => {
   const [roomDetails, setRoomDetails] = useState('');
@@ -20,54 +22,60 @@ const Room = () => {
   const navigateToReserve = () => {
     navigate('/reservations-new');
   };
+  const userLogin = () => {
+    if (localStorage.getItem('id') === null) {
+      navigate('/user');
+    } else {
+      navigateToReserve();
+    }
+  };
+  const backBtn = () => {
+    navigate('/');
+  };
 
   return (
-    <div className="row">
-      <div className="col-md-6">
+    <div className="row room-div">
+      <div className="col-md-8 room-image">
         <img src={roomDetails.image} alt="room" className="room-image" />
       </div>
-      <div className="col-md-6">
-        <h2 className="room-name">{roomDetails.name}</h2>
-        <p className="room-description">{roomDetails.description}</p>
-        <p className="room-size">{roomDetails.size}</p>
-        <p className="room-view">{roomDetails.view}</p>
-        <p className="room-bedding">{roomDetails.bedding}</p>
-        <button type="button" className="btn btn-primary" onClick={navigateToReserve}>Reserve</button>
+      <div className="col-md-4 room-details">
+        <h3 className="room-name">
+          {roomDetails.name}
+        </h3>
+        <div className="room-data">
+          <p className="room-description">
+            Room description:
+            <span>{roomDetails.description}</span>
+          </p>
+          <p className="room-size">
+            Room size:
+            <span>{roomDetails.size}</span>
+          </p>
+          <p className="room-view">
+            Room view:
+            <span>{roomDetails.view}</span>
+          </p>
+          <p className="room-bedding">
+            Room bedding:
+            <span>{roomDetails.bedding}</span>
+          </p>
+          <div className="reserve-btn">
+            <button type="button" className="fw-bold" onClick={userLogin}>
+              Reserve
+              <span><IoIosArrowDropright /></span>
+            </button>
+          </div>
+        </div>
       </div>
-      {/* <button type="button" onClick={navigateToReserve}>Reserve</button>
-      <h1>
-        {' '}
-        Room name:
-        {roomDetails.name}
-        {' '}
-      </h1>
-      <h1>
-        {' '}
-        Room description:
-        {roomDetails.description}
-        {' '}
-      </h1>
-      <h1>
-        <img src={roomDetails.image} alt={roomDetails.name} />
-      </h1>
-      <h1>
-        {' '}
-        Room size:
-        {roomDetails.size}
-        {' '}
-      </h1>
-      <h1>
-        {' '}
-        Room view:
-        {roomDetails.view}
-        {' '}
-      </h1>
-      <h1>
-        {' '}
-        Room bedding:
-        {roomDetails.bedding}
-        {' '}
-      </h1> */}
+      <div className="back-arrow fixed-bottom">
+        <button
+          type="button"
+          className="btn"
+          onClick={backBtn}
+        >
+          <BiLeftArrow />
+        </button>
+      </div>
     </div>
   );
 };

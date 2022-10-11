@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 body {
@@ -53,8 +54,4 @@ body {
 .navbar-brand img {
   height: 4rem;
   padding-left: 3rem;
-}
-
-.navbar-brand {
-  padding-top: 1rem;
 }
