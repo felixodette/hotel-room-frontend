@@ -20,4 +20,9 @@ describe('A Room', () => {
     const RoomDescription = screen.getByText('Room description:');
     expect(RoomDescription).toBeInTheDocument();
   });
+
+  test('Test the dom for non existing elements on the page', () => {
+    const price = screen.queryByText('price');
+    expect(price).not.toBeInTheDocument();
+  });
 });
