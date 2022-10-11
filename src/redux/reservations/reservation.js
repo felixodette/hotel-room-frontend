@@ -25,14 +25,14 @@ const reservationsReducer = (state = initialState, { type, payload }) => {
 };
 
 export const fetchReservations = () => async (dispatch) => {
-  await axios.get('https://vacayhome-api.herokuapp.com/api/v1/bookings')
+  await axios.get('https://localhost:3001/api/v1/reservations')
     .then((response) => {
       dispatch({ type: FETCH_DATA, payload: response.data });
     });
 };
 
 export const postReservations = (data) => async (dispatch) => {
-  await axios.post('https://vacayhome-api.herokuapp.com/api/v1/bookings', data)
+  await axios.post('https://localhost:3001/api/v1/reservations', data)
     .then((response) => {
       dispatch({ type: POST_DATA, payload: response });
     });
