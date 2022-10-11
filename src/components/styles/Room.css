@@ -68,3 +68,9 @@
   background-color: #97bf11;
   color: #fff;
 }
+
+@media (max-width: 991.98px) {
+  .back-arrow {
+    display: none;
+  }
+}
