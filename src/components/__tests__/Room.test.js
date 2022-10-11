@@ -25,4 +25,15 @@ describe('A Room', () => {
     const price = screen.queryByText('price');
     expect(price).not.toBeInTheDocument();
   });
+
+  test('It correctly renders a room component', () => {
+    const { container } = render(
+      <Provider store={store}>
+        <Router>
+          <Room />
+        </Router>
+      </Provider>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
