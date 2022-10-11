@@ -25,4 +25,15 @@ describe('Sidebar Navigation', () => {
     const price = screen.queryByText('price');
     expect(price).not.toBeInTheDocument();
   });
+
+  test('It correctly renders a Nav component', () => {
+    const { container } = render(
+      <Provider store={store}>
+        <Router>
+          <Nav />
+        </Router>
+      </Provider>,
+    );
+    expect(container).toMatchSnapshot();
+  });
 });
