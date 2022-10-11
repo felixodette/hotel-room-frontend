@@ -36,4 +36,17 @@ describe('A Room', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  test('It renders the Room correctly', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <Router>
+            <Room />
+          </Router>
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
