@@ -20,4 +20,9 @@ describe('Sidebar Navigation', () => {
     const Home = screen.getByText('Home');
     expect(Home).toBeInTheDocument();
   });
+
+  test('Test the dom for non existing elements on the page', () => {
+    const price = screen.queryByText('price');
+    expect(price).not.toBeInTheDocument();
+  });
 });
