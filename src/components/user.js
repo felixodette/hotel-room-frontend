@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles/user.css';
 
 function AddUser() {
   const [name, setName] = useState('');
@@ -25,11 +26,14 @@ function AddUser() {
     setInterval(() => { setAlert(''); }, 3000);
   };
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <form onSubmit={createUser}>
-        <input id="name" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <button type="submit">Submit</button>
+    <div className="signup container-fluid d-flex flex-column align-items-center h-100 mb-5">
+      <h2 className="add-user-header text-center  mt-5 fw-bold fs-1 text-white text-uppercase">Sign Up</h2>
+      <form onSubmit={createUser} className="user-form col-md-6 d-flex align-items-center flex-column justify-content-center">
+        <label htmlFor="name" className="text-white  col-md-8 mb-3">
+          User Name:
+          <input id="name" type="text" className="col-12 bg-transparent-add-user rounded" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+        </label>
+        <button type="submit" className="fw-bold user-submit">Submit</button>
       </form>
       <span>
         {' '}

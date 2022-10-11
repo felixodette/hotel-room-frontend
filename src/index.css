@@ -13,6 +13,10 @@ body {
   main {
     padding-left: 240px;
   }
+
+  .sidebar {
+    width: 100%;
+  }
 }
 
 /* Sidebar */
@@ -22,14 +26,8 @@ body {
   bottom: 0;
   left: 0;
   padding: 58px 0 0; /* Height of navbar */
-  width: 240px;
+  width: 17.5%;
   z-index: 600;
-}
-
-@media (max-width: 991.98px) {
-  .sidebar {
-    width: 100%;
-  }
 }
 
 .sidebar .active {
@@ -38,13 +36,8 @@ body {
   background: #97bf11;
 }
 
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: 0.5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+.position-sticky {
+  padding-top: 2rem;
 }
 
 .list-group-item {
@@ -53,10 +46,15 @@ body {
   border: none;
 }
 
-nav {
-  border-right: solid 1px #e3e3e3;
-}
-
 .card-footer {
   padding: 2%;
+}
+
+.navbar-brand img {
+  height: 4rem;
+  padding-left: 3rem;
+}
+
+.navbar-brand {
+  padding-top: 1rem;
 }
