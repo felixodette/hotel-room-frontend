@@ -22,7 +22,7 @@ const Nav = () => (
           <a href="/user" className="list-group-item list-group-item-action py-2 ripple">
             <span>Add User</span>
           </a>
-          <a href="/reservations-NEW" className="list-group-item list-group-item-action py-2 ripple">
+          <a href="/reservations-new" className="list-group-item list-group-item-action py-2 ripple">
             <span>Make Reservations</span>
           </a>
           <a href="/reservations" className="list-group-item list-group-item-action py-2 ripple">
