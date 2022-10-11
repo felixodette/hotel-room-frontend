@@ -1,48 +1,114 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchReservationsApi, cancelReservationApi } from '../../redux/reservations/reservations';
+import { Link, useParams } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
+import { getRooms } from '../../redux/rooms';
+import { postReservations } from '../../redux/reservations/reservation';
 
 const Reservation = () => {
-  const user = useSelector((state) => state.signUpReducer);
-  const { accessToken } = user;
-  const [successNotice, setSuccessNotice] = useState(false);
+  const [startDate, setStartDate] = useState(new Date());
+  const [title, setTitle] = useState('Location');
 
-  const reservations = useSelector((state) => state.reservationsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchReservationsApi(accessToken));
-  }, [dispatch]);
+    dispatch(getRooms());
+  }, []);
 
-  const cancelReservation = (id) => {
-    dispatch(cancelReservationApi(accessToken, id));
-    setSuccessNotice(true);
+  const rooms = useSelector((state) => state);
+  const reservationPost = useSelector((state) => state.reservationsReducer);
+
+  const { user_id: userId, house_id: houseId } = useParams();
+
+  const [roomId, setRoomId] = useState(houseId);
+
+  let image = '';
+  let location = '';
+
+  rooms.roomsReducer.map((element) => {
+    if (element.id === parseInt(roomId, 10)) {
+      image = element.image_url;
+      location = element.address;
+    }
+    return image;
+  });
+
+  const createReservation = () => {
+    const postData = {
+      booking:
+      {
+        user_id: parseInt(userId, 10),
+        house_id: parseInt(roomId, 10),
+        date: startDate.toLocaleDateString(),
+      },
+    };
+
+    dispatch(postReservations(postData));
   };
 
   return (
-    <div className="w-full my-16 flex flex-col gap-10">
-      {reservations.length === 0 && (
-        <h3 className="text-lg text-center mt-4">No reservations available!</h3>
-      )}
-      {
-        reservations.map((item) => (
-          <div key={item.id} className="flex justify-between mx-4">
-            <img src={item.doctor.photo} alt="doctor" className="w-20 rounded-full" />
-            <p className="mt-8 font-bold">{item.city}</p>
-            <p className="mt-8 font-bold">{item.date}</p>
-            <button
-              type="button"
-              onClick={() => cancelReservation(item.id)}
-              className="px-4 h-12 bg-lime-500 rounded text-slate-50 mt-4"
-            >
-              Cancel
-            </button>
+    <>
+      <div
+        className="reservations-container"
+        style={{
+          backgroundImage: `linear-gradient(
+          325deg,
+          rgba(87, 111, 1, 0.777) 0%,
+          rgba(150, 191, 2, 0.93) 100%
+          ),url(${(image)})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
+      >
+        <div className="reservation-header-links">
+          <Link to={`/${userId}`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
+        </div>
+        <div className="reservations-description">
+          <div className="reservations-header">
+            <h1>Book the place</h1>
           </div>
-        ))
-      }
-      {successNotice && (
-        <p className="text-center text-sky-500 text-lg mt-4">Reservation canceled succesfully!</p>
-      )}
-    </div>
+          <p>
+            Pick a House to Reserve!
+          </p>
+          {
+           parseInt(houseId, 10) === 0 && (
+           <select
+             onChange={(e) => setRoomId(e.target.value)}
+             // align="end"
+             style={{
+               outline: 'none',
+               width: '95%',
+               borderRadius: '2px',
+             }}
+             placeholder="Choose a House you want to reserve."
+             id="dropdown-menu-align-end"
+           >
+             <option disabled selected>
+               Choose a House you want to reserve
+             </option>
+             { rooms.roomsReducer.map((room) => (
+               <option key={room.id} value={room.id}>
+                 {room.name}
+               </option>
+             ))}
+           </select>
+           )
+          }
+          <div className="reservations-buttons">
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+            <DropdownButton align="end" title={title} id="dropdown-menu-align-end">
+              <Dropdown.Item eventKey="1" onClick={() => setTitle(location)}>{location}</Dropdown.Item>
+            </DropdownButton>
+            <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
+          </div>
+          { reservationPost.payload && reservationPost.payload.status === 201
+            && <p>Reservation was successful!</p>}
+        </div>
+      </div>
+    </>
   );
 };
 
