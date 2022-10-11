@@ -21,14 +21,21 @@ function AddRoom() {
       bedding,
     };
 
+    function notify(response) {
+      if (response === 201) {
+        setMessage(<div className="add-room-success-notification border mt-1 bg-dark rounded p-1">Room successfully created!</div>);
+      } else {
+        setMessage(<div className="add-room-error-notification border mt-1 bg-dark text-danger rounded p-1">ERROR: Room could not be created!</div>);
+      }
+    }
+
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(room),
     };
     fetch('http://localhost:3000/api/v1/rooms/', requestOptions)
-      .then((response) => response.json())
-      .then(setMessage('Room created'));
+      .then((response) => notify(response.status));
 
     setName('');
     setDescription('');
@@ -36,7 +43,7 @@ function AddRoom() {
     setSize('');
     setView('');
     setBedding('');
-    setInterval(() => { setMessage(''); }, 3000);
+    setInterval(() => { setMessage(''); }, 5000);
   };
   return (
     <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5">
@@ -67,6 +74,7 @@ function AddRoom() {
             placeholder="Deluxe Double Room"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            maxLength="50"
             required
           />
         </label>
@@ -79,9 +87,10 @@ function AddRoom() {
             id="description"
             className="col-12 bg-transparent-add-room rounded"
             type="text"
-            placeholder="Description"
+            placeholder="Sleep soundly in Bodrum on the indulgent bedding..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            minLength="10"
             required
           />
         </label>
@@ -93,8 +102,8 @@ function AddRoom() {
           <input
             id="image"
             className="col-12 bg-transparent-add-room rounded"
-            type="text"
-            placeholder="Image URL"
+            type="url"
+            placeholder="https://images.hotels.com/photos/5472270/"
             value={image}
             onChange={(e) => setImage(e.target.value)}
             required
@@ -102,14 +111,14 @@ function AddRoom() {
         </label>
 
         <label htmlFor="size" className="text-white  col-md-8 mb-3">
-          Room Size:
+          Room Size in m2:
           {' '}
           <br />
           <input
             id="size"
             className="col-12 bg-transparent-add-room rounded"
-            type="text"
-            placeholder="In square meter"
+            type="number"
+            placeholder="45"
             value={size}
             onChange={(e) => setSize(e.target.value)}
             required
@@ -124,7 +133,7 @@ function AddRoom() {
             id="view"
             className="col-12 bg-transparent-add-room rounded"
             type="text"
-            placeholder="Sea, ocean.."
+            placeholder="Sea, city, dessert.."
             value={view}
             onChange={(e) => setView(e.target.value)}
             required
@@ -149,7 +158,7 @@ function AddRoom() {
         </button>
 
       </form>
-      <span>
+      <span className="">
         {message}
       </span>
     </div>
