@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router';
-import './styles/AddRoom.css';
+import '../styles/AddRoom.css';
 
 const ReservationForm = () => {
   const [city, setCity] = useState('');
@@ -13,7 +13,7 @@ const ReservationForm = () => {
       room_id: id,
       user_id: userId,
       city,
-      date
+      date,
     };
 
     const notify = (response) => {
@@ -22,7 +22,7 @@ const ReservationForm = () => {
       } else {
         setMessage(<div className="add-room-error-notification border mt-1 bg-dark text-danger rounded p-1">ERROR: Reservation could not be created!</div>);
       }
-    }
+    };
 
     const requestOptions = {
       method: 'POST',
@@ -45,7 +45,7 @@ const ReservationForm = () => {
         Would you like to reserve a room?
         {' '}
         <br />
-        No need to wait, fill the forms below and your reservation will be added to our website accordingly!
+        No need to wait, fill the forms below and your reservation will be added to our website!
         {' '}
       </p>
       <form
@@ -57,11 +57,12 @@ const ReservationForm = () => {
           Room ID
           {' '}
           <br />
-          <input type="text"
-                 className="col-12 bg-transparent-add-room rounded"
-                 id="room_id"
-                 value={id}
-                 readOnly
+          <input
+            type="text"
+            className="col-12 bg-transparent-add-room rounded"
+            id="room_id"
+            value={id}
+            readOnly
           />
         </label>
         <label htmlFor="user_id" className="text-white  col-md-8 mb-3">
