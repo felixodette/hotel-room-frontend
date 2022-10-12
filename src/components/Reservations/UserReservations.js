@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchReservations } from "../../actions/reservationActions";
@@ -7,12 +7,12 @@ import Card from 'react-bootstrap/Card';
 class UserReservations extends Component (
   componentWillMount() {
     this.props.fetchReservations();
-  };
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.newReservation) {
       this.props.reservations.unshift(nextProps.newReservation);
-    };
+    }
   };
 
   render() {
