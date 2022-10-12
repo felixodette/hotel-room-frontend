@@ -7,6 +7,7 @@ import AddUser from './user';
 import Room from './Rooms/Room';
 import Nav from './Nav';
 import Reservation from './Reservations/Reservation';
+import UserReservations from './Reservations/UserReservations';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Rooms />} />
-            {/* <Route path="/reservations" element={<Reservations />} /> */}
+            <Route path="/reservations" element={<UserReservations />} />
             <Route path="/reservations-new" element={<Reservation />} />
             <Route path="/room-new" element={<AddRoom />} />
             <Route path="/room/:id" element={<Room />} />
