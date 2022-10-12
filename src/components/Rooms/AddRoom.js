@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/AddRoom.css';
+
 const AddRoom = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -20,13 +21,13 @@ const AddRoom = () => {
       bedding,
     };
 
-    const notify =(response) => {
+    const notify = (response) => {
       if (response === 201) {
         setMessage(<div className="add-room-success-notification border mt-1 bg-dark rounded p-1">Room successfully created!</div>);
       } else {
         setMessage(<div className="add-room-error-notification border mt-1 bg-dark text-danger rounded p-1">ERROR: Room could not be created!</div>);
       }
-    }
+    };
 
     const requestOptions = {
       method: 'POST',
@@ -162,5 +163,5 @@ const AddRoom = () => {
       </span>
     </div>
   );
-}
+};
 export default AddRoom;
