@@ -40,6 +40,7 @@ exports[`AddRoom It renders the Rooms component correctly 1`] = `
         <input
           class="col-12 bg-transparent-add-room rounded"
           id="name"
+          maxlength="50"
           placeholder="Deluxe Double Room"
           required=""
           type="text"
@@ -56,7 +57,8 @@ exports[`AddRoom It renders the Rooms component correctly 1`] = `
         <input
           class="col-12 bg-transparent-add-room rounded"
           id="description"
-          placeholder="Description"
+          minlength="10"
+          placeholder="Sleep soundly in Bodrum on the indulgent bedding..."
           required=""
           type="text"
           value=""
@@ -72,9 +74,9 @@ exports[`AddRoom It renders the Rooms component correctly 1`] = `
         <input
           class="col-12 bg-transparent-add-room rounded"
           id="image"
-          placeholder="Image URL"
+          placeholder="https://images.hotels.com/photos/5472270/"
           required=""
-          type="text"
+          type="url"
           value=""
         />
       </label>
@@ -82,15 +84,15 @@ exports[`AddRoom It renders the Rooms component correctly 1`] = `
         class="text-white  col-md-8 mb-3"
         for="size"
       >
-        Room Size:
+        Room Size in m2:
          
         <br />
         <input
           class="col-12 bg-transparent-add-room rounded"
           id="size"
-          placeholder="In square meter"
+          placeholder="45"
           required=""
-          type="text"
+          type="number"
           value=""
         />
       </label>
@@ -104,7 +106,7 @@ exports[`AddRoom It renders the Rooms component correctly 1`] = `
         <input
           class="col-12 bg-transparent-add-room rounded"
           id="view"
-          placeholder="Sea, ocean.."
+          placeholder="Sea, city, dessert.."
           required=""
           type="text"
           value=""
@@ -134,7 +136,9 @@ exports[`AddRoom It renders the Rooms component correctly 1`] = `
         Submit
       </button>
     </form>
-    <span />
+    <span
+      class=""
+    />
   </div>
 </div>
 `;
@@ -179,6 +183,7 @@ exports[`AddRoom It renders the Rooms component correctly 2`] = `
       <input
         className="col-12 bg-transparent-add-room rounded"
         id="name"
+        maxLength="50"
         onChange={[Function]}
         placeholder="Deluxe Double Room"
         required={true}
@@ -196,8 +201,9 @@ exports[`AddRoom It renders the Rooms component correctly 2`] = `
       <input
         className="col-12 bg-transparent-add-room rounded"
         id="description"
+        minLength="10"
         onChange={[Function]}
-        placeholder="Description"
+        placeholder="Sleep soundly in Bodrum on the indulgent bedding..."
         required={true}
         type="text"
         value=""
@@ -214,9 +220,9 @@ exports[`AddRoom It renders the Rooms component correctly 2`] = `
         className="col-12 bg-transparent-add-room rounded"
         id="image"
         onChange={[Function]}
-        placeholder="Image URL"
+        placeholder="https://images.hotels.com/photos/5472270/"
         required={true}
-        type="text"
+        type="url"
         value=""
       />
     </label>
@@ -224,16 +230,16 @@ exports[`AddRoom It renders the Rooms component correctly 2`] = `
       className="text-white  col-md-8 mb-3"
       htmlFor="size"
     >
-      Room Size:
+      Room Size in m2:
        
       <br />
       <input
         className="col-12 bg-transparent-add-room rounded"
         id="size"
         onChange={[Function]}
-        placeholder="In square meter"
+        placeholder="45"
         required={true}
-        type="text"
+        type="number"
         value=""
       />
     </label>
@@ -248,7 +254,7 @@ exports[`AddRoom It renders the Rooms component correctly 2`] = `
         className="col-12 bg-transparent-add-room rounded"
         id="view"
         onChange={[Function]}
-        placeholder="Sea, ocean.."
+        placeholder="Sea, city, dessert.."
         required={true}
         type="text"
         value=""
@@ -279,6 +285,8 @@ exports[`AddRoom It renders the Rooms component correctly 2`] = `
       Submit
     </button>
   </form>
-  <span />
+  <span
+    className=""
+  />
 </div>
 `;
