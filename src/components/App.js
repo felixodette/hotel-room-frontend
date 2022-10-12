@@ -1,11 +1,11 @@
 import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
+import Nav from './Nav';
 import AddRoom from './Rooms/AddRoom';
 import Rooms from './Rooms/Rooms';
 import DeleteRoom from './Rooms/DeleteRoom';
 import AddUser from './user';
 import Room from './Rooms/Room';
-import Nav from './Nav';
 import Reservation from './Reservations/Reservation';
 import UserReservations from './Reservations/UserReservations';
 
@@ -13,7 +13,7 @@ function App() {
   return (
     // make the design responsive only for desktop
     <div className="row m-0 p-0">
-      <div className="col-md-2 w-sm-0 p-0" style={{ width: '240px' }}>
+      <div className="col-md-2 w-sm-0 p-0">
         <Nav />
       </div>
       <div className="col-md-10 p-0 vh-100">

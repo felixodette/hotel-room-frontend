@@ -1,4 +1,4 @@
-#add-room-container {
+.signup {
   min-height: 100%;
   background: linear-gradient(0deg, rgba(151, 191, 17, 0.8), rgba(151, 191, 17, 0.8)), url("https://cache.marriott.com/content/dam/marriott-renditions/BJVEB/bjveb-suite-0236-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*");
   background-size: cover;
@@ -6,16 +6,11 @@
 }
 
 @media (max-width: 768px) {
-  #add-room-form {
+  .user-form {
     width: 90% !important;
   }
 
-  #name,
-  #description,
-  #image,
-  #size,
-  #view,
-  #bedding {
+  #name {
     height: 30px !important;
   }
 
@@ -28,32 +23,27 @@
   }
 }
 
-#add-room-hr {
+.add-user-header {
   width: 50%;
   border-width: 2px;
   border-color: white;
 }
 
-.bg-transparent-add-room {
+.bg-transparent-add-user {
   background-color: rgba(151, 191, 17, 0.9);
 }
 
-.bg-transparent-add-room[type=text]:focus {
+.bg-transparent-add-user[type=text]:focus {
   color: black !important;
   background-color: rgb(255, 255, 255);
   transition-duration: 0.4s;
 }
 
-.bg-transparent-add-room[type=text]:focus-visible {
+.bg-transparent-add-user[type=text]:focus-visible {
   outline-color: #97bf11 !important;
 }
 
-#name,
-#description,
-#image,
-#size,
-#view,
-#bedding {
+#name {
   border: 2px solid white;
   padding-left: 15px;
   color: white;
@@ -67,7 +57,7 @@
   font-size: 14px;
 }
 
-#add-room-submit-btn {
+.user-submit {
   border: 0;
   width: 100px;
   height: 40px;
@@ -84,23 +74,4 @@
 
 label {
   width: 100%;
-}
-
-/* Form Notifications */
-.add-room-success-notification {
-  color: #97bf11;
-}
-
-/* Hide input number increment buttons */
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
