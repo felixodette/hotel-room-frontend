@@ -23,6 +23,7 @@ exports[`DeleteRoom It renders the Rooms component correctly 1`] = `
       <br />
       You can do it with one click!
     </p>
+    <div />
     <table
       class="table w-50 table-hover"
       id="delete-room-table"
@@ -71,6 +72,7 @@ exports[`DeleteRoom It renders the Rooms component correctly 2`] = `
     <br />
     You can do it with one click!
   </p>
+  <div />
   <table
     className="table w-50 table-hover"
     id="delete-room-table"
