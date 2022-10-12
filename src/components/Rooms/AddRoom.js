@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/AddRoom.css';
-
-function AddRoom() {
+const AddRoom = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
@@ -21,7 +20,7 @@ function AddRoom() {
       bedding,
     };
 
-    function notify(response) {
+    const notify =(response) => {
       if (response === 201) {
         setMessage(<div className="add-room-success-notification border mt-1 bg-dark rounded p-1">Room successfully created!</div>);
       } else {
