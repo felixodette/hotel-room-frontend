@@ -14,9 +14,30 @@ body {
   main {
     padding-left: 240px;
   }
+}
+
+@media (max-width: 991.98px) {
+  .list-group {
+    border: solid 1px #e3e3e3;
+  }
 
   .sidebar {
     width: 100%;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .socials {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+
+  .fs-1 {
+    font-size: 2.5rem !important;
   }
 }
 
@@ -27,7 +48,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 58px 0 0; /* Height of navbar */
-  width: 17.5%;
+  min-width: 18rem;
   z-index: 600;
 }
 
