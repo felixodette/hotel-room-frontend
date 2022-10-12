@@ -92,7 +92,6 @@ const ReservationForm = () => {
         </label>
         <label htmlFor="date" className="text-white  col-md-8 mb-3">
           Date
-          City
           {' '}
           <br />
           <input
