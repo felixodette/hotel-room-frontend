@@ -1,13 +1,11 @@
 import React from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
-import Nav from './Nav';
 import AddRoom from './Rooms/AddRoom';
 import Rooms from './Rooms/Rooms';
 import DeleteRoom from './Rooms/DeleteRoom';
 import AddUser from './user';
 import Room from './Rooms/Room';
-import Reservation from './Reservations/Reservation';
-import UserReservations from './Reservations/UserReservations';
+import Nav from './Nav';
 
 function App() {
   return (
@@ -20,8 +18,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Rooms />} />
-            <Route path="/reservations" element={<UserReservations />} />
-            <Route path="/reservations-new" element={<Reservation />} />
+            {/* <Route path="/reservations" element={<MyReservations />} /> */}
+            {/* <Route path="/reservations-new" element={<ReservationForm />} /> */}
             <Route path="/room-new" element={<AddRoom />} />
             <Route path="/room/:id" element={<Room />} />
             {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}

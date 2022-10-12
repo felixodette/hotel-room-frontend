@@ -31,7 +31,7 @@ const Nav = () => (
         </div>
 
       </div>
-      <div className="card-footer bg-transparent border-0 fixed-bottom w-25">
+      <div className="card-footer bg-transparent border-0 fixed-bottom w-25 socials">
         <GrFacebookOption
           onClick={() => {
             window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, '_blank');
