@@ -145,6 +145,10 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/felixodette/hotel-room-frontend/issues).
 
+### Attributions and Credit
+
+Orignal design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
