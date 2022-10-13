@@ -21,6 +21,10 @@ body {
     border: solid 1px #e3e3e3;
   }
 
+  #main-wrapper {
+height: auto !important;
+  }
+
   .sidebar {
     width: 100% !important;
   }
