@@ -39,28 +39,31 @@ const Room = () => {
         <img src={roomDetails.image} alt="room" className="room-image" />
       </div>
       <div className="col-md-4 room-details">
-        <h3 className="room-name">
+        <h3 className="room-name text-center">
           {roomDetails.name}
         </h3>
         <div className="room-data">
-          <p className="room-description">
-            Room description:
-            <span>{roomDetails.description}</span>
+          <p className="room-description p-2">
+            Description:
+            {' '}
+            <span
+            className='ms-2'
+            >{roomDetails.description}</span>
           </p>
-          <p className="room-size">
-            Room size:
+          <p className="room-size p-2">
+            Size:
             <span>{roomDetails.size}</span>
           </p>
-          <p className="room-view">
-            Room view:
+          <p className="room-view p-2">
+            View:
             <span>{roomDetails.view}</span>
           </p>
-          <p className="room-bedding">
-            Room bedding:
+          <p className="room-bedding p-2">
+            Bedding:
             <span>{roomDetails.bedding}</span>
           </p>
           <div className="reserve-btn">
-            <button type="button" className="fw-bold" onClick={() => userLogin(roomDetails.id)}>
+            <button type="button" className="fw-bold d-flex align-center justify-content-around" id='reserve-button' onClick={() => userLogin(roomDetails.id)}>
               Reserve
               <span><IoIosArrowDropright /></span>
             </button>

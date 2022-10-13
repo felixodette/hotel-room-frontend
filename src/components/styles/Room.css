@@ -34,6 +34,12 @@
   justify-content: center;
 }
 
+#reserve-button:hover {
+  color: #97bf11;
+  background-color: #fff;
+  border: 2px solid #97bf11;
+}
+
 .reserve-btn button {
   background-color: #97bf11;
   color: #fff;
