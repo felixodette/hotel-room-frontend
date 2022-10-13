@@ -43,32 +43,34 @@ const DeleteRoom = () => {
       <div>
         {message}
       </div>
-      <table className="table w-50 table-hover" id="delete-room-table">
-        <thead>
-          <tr>
-            <th scope="col" className="text-white">Room Name</th>
-            <th scope="col" className="text-center text-white">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rooms.map((room) => (
-            <tr className="room" key={room.id}>
-              <td><p className="text-white mt-3" id="room-name">{room.name}</p></td>
-              <td className="text-center">
-                <button
-                  id="delete-room-btn"
-                  className="mt-2"
-                  type="button"
-                  onClick={() => deleteRoomHandler(room.id)}
-                >
-                  Delete
-                </button>
-              </td>
+      <div id="delete-room-table" className="table w-50 table-hover">
+        <table className="table w-100 table-hover">
+          <thead>
+            <tr>
+              <th scope="col" className="text-white">Room Name</th>
+              <th scope="col" className="text-center text-white">Action</th>
             </tr>
-          ))}
-        </tbody>
+          </thead>
+          <tbody>
+            {rooms.map((room) => (
+              <tr className="room" key={room.id}>
+                <td><p className="text-white mt-3" id="room-name">{room.name}</p></td>
+                <td className="text-center">
+                  <button
+                    id="delete-room-btn"
+                    className="mt-2"
+                    type="button"
+                    onClick={() => deleteRoomHandler(room.id)}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
 
-      </table>
+        </table>
+      </div>
     </div>
   );
 };
