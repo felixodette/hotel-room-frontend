@@ -97,7 +97,7 @@ const Rooms = () => {
   };
 
   return (
-    <div className="w-100" id="rooms-containerr">
+    <div id="rooms-container" className="w-100">
       <h1 className="text-center mt-5 mb-2 pt-5 mt-md-1 fw-bold fs-2">ROOMS</h1>
       <h2 className="text-center mt-2 mb-3 fw-bold opacity-50 fs-5">Please select a Room</h2>
       <Carousel

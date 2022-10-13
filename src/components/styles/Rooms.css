@@ -1,10 +1,6 @@
-#rooms-cotainer {
-  min-height: 100%;
+#rooms-container {
+  border-left: 2px solid #b5b5b5a1;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .room-card:hover {
