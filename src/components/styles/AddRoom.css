@@ -2,13 +2,26 @@
   min-height: 100%;
   background: linear-gradient(0deg, rgba(151, 191, 17, 0.8), rgba(151, 191, 17, 0.8)), url("https://cache.marriott.com/content/dam/marriott-renditions/BJVEB/bjveb-suite-0236-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*");
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
   #add-room-form {
     width: 90% !important;
   }
+
+
+
+  #add-room-form {
+    height: 100%;
+    padding-bottom: 50px;
+  }
+
+
+      }
+
+      #add-room-heading {
+        margin-top: 80px;
 
   #name,
   #description,

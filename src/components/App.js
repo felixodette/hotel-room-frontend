@@ -16,11 +16,10 @@ function App() {
       <div className="col-md-2 w-sm-0 p-0">
         <Nav />
       </div>
-      <div className="col-md-10 p-0 vh-100">
+      <div id="main-wrapper" className="col-md-10 p-0 vh-100">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Rooms />} />
-            {/* <Route path="/reservations" element={<MyReservations />} /> */}
             <Route path="/reservations-new/:id/" element={<ReservationForm />} />
             <Route path="/reservations-new/" element={<ReservationForm />} />
             <Route path="/my-reservations" element={<MyReservations />} />
