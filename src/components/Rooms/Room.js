@@ -19,14 +19,14 @@ const Room = () => {
       .then((data) => setRoomDetails(data));
   }, []);
 
-  const navigateToReserve = () => {
-    navigate('/reservations-new');
+  const navigateToReserve = (id) => {
+    navigate(`/reservations-new/${id}`);
   };
-  const userLogin = () => {
+  const userLogin = (id) => {
     if (localStorage.getItem('id') === null) {
       navigate('/user');
     } else {
-      navigateToReserve();
+      navigateToReserve(id);
     }
   };
   const backBtn = () => {
@@ -60,7 +60,7 @@ const Room = () => {
             <span>{roomDetails.bedding}</span>
           </p>
           <div className="reserve-btn">
-            <button type="button" className="fw-bold" onClick={userLogin}>
+            <button type="button" className="fw-bold" onClick={() => userLogin(roomDetails.id)}>
               Reserve
               <span><IoIosArrowDropright /></span>
             </button>
@@ -79,4 +79,5 @@ const Room = () => {
     </div>
   );
 };
+
 export default Room;
