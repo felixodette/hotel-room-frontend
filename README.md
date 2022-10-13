@@ -1,7 +1,8 @@
 
 ## SuiteUp
 
-<img width="1439" alt="Screen Shot 2022-10-13 at 11 53 55 PM" src="https://user-images.githubusercontent.com/25887253/195708509-02724b72-d8ef-4e63-8a18-3087ddd6eb56.png">
+<img width="1439" alt="Screen Shot 2022-10-14 at 12 09 43 AM" src="https://user-images.githubusercontent.com/25887253/195711402-bc3223ce-c1bd-40d5-93ce-73dc0f564891.png">
+
 > Hotel Room is a project that simulates a hotel room booking system. It allows users to book a room for one night. It also allows users to see the list of all booked rooms on that day and see a list of rooms that are not booked yet. You can check the source code for backend [here](https://github.com/kamzzy/Hotel-Room).
 
 ## Live Demo
