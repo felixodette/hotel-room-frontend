@@ -1,76 +1,90 @@
-.room-div {
-  padding: 5rem 0 0 1.5rem;
-}
+  .room-div {
+    padding: 5rem 0 0 1.5rem;
+  }
 
-.room-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .room-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-.room-details {
-  padding: 1rem;
-}
+  .room-details {
+    padding: 1rem;
+  }
 
-.room-name {
-  text-align: end;
-  padding: 0 2rem 1rem 0;
-}
+  .room-name {
+    text-align: end;
+    padding: 0 2rem 1rem 0;
+  }
 
-.room-data :nth-child(2n+0) {
-  background-color: transparent;
-}
+  .room-data :nth-child(2n+0) {
+    background-color: transparent;
+  }
 
-.room-data p {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(232, 229, 229);
-  padding: 0.5rem 2rem 0.5rem 0;
-}
+  .room-data p {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(232, 229, 229);
+    padding: 0.5rem 2rem 0.5rem 0;
+  }
 
-.reserve-btn {
-  padding: 25% 0 0 0;
-  display: flex;
-  justify-content: center;
-}
+  .reserve-btn {
+    padding: 25% 0 0 0;
+    display: flex;
+    justify-content: center;
+  }
 
-#reserve-button:hover {
-  color: #97bf11;
-  background-color: #fff;
-  border: 2px solid #97bf11;
-}
+  #reserve-button:hover {
+    color: #97bf11;
+    background-color: #fff;
+    border: 2px solid #97bf11;
+  }
 
-.reserve-btn button {
-  background-color: #97bf11;
-  color: #fff;
-  border-radius: 20px;
-  font-size: 24px;
-  width: 12rem;
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  transition-duration: 0.4s;
-  padding: 0 7px;
-  border: none;
-}
+  .reserve-btn button {
+    background-color: #97bf11;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 24px;
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    transition-duration: 0.4s;
+    padding: 0 7px;
+    border: none;
+  }
 
-.back-arrow {
-  padding: 0 0 3rem 0;
-  margin-left: 13rem;
-}
+  .back-arrow {
+    padding: 0 0 3rem 0;
+    margin-left: 13rem;
+  }
 
-.back-arrow button {
-  border-radius: 0 50% 50% 0;
-  width: 80px;
-  height: 60px;
-  font-size: 24px;
-  color: #fff;
-  font-weight: bold;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  background-color: #97bf11;
-}
+  .back-arrow button {
+    border-radius: 0 50% 50% 0;
+    width: 80px;
+    height: 60px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #97bf11;
+  }
 
-.back-arrow button:hover {
-  background-color: #97bf11;
-  color: #fff;
-}
+  .back-arrow button:hover {
+    background-color: #97bf11;
+    color: #fff;
+  }
+
+  @media (max-width: 991.98px) {
+    .room-div {
+      padding: 5rem 0 0 0;
+    }
+
+    .back-arrow {
+      display: none;
+    }
+
+    .reserve-btn {
+      padding: 5% 0 5% 0;
+    }
+  }

@@ -46,9 +46,7 @@ const Room = () => {
           <p className="room-description p-2">
             Description:
             {' '}
-            <span
-            className='ms-2'
-            >{roomDetails.description}</span>
+            <span>{roomDetails.description}</span>
           </p>
           <p className="room-size p-2">
             Size:
