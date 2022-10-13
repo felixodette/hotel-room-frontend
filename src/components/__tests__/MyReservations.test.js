@@ -13,11 +13,6 @@ describe('My Reservations', () => {
     </Provider>,
   );
 
-  test('Test the dom for success rendering elements', () => {
-    const title = screen.getByText('MY RESERVATIONS');
-    expect(title).toBeInTheDocument();
-  });
-
   test('Test the dom for non existing element on the page', () => {
     const title = screen.queryByText('example');
     expect(title).not.toBeInTheDocument();
