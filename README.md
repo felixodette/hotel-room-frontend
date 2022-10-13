@@ -1,10 +1,21 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
-## Hotel Room
+## SuiteUp
 
+<img width="1439" alt="Screen Shot 2022-10-13 at 11 53 55 PM" src="https://user-images.githubusercontent.com/25887253/195708509-02724b72-d8ef-4e63-8a18-3087ddd6eb56.png">
 > Hotel Room is a project that simulates a hotel room booking system. It allows users to book a room for one night. It also allows users to see the list of all booked rooms on that day and see a list of rooms that are not booked yet. You can check the source code for backend [here](https://github.com/kamzzy/Hotel-Room).
 
+## Live Demo
+- [Front End](https://hotel-room-frontend.vercel.app/) 
+- [Back End API](https://afternoon-fjord-27064.herokuapp.com/)
+
+## Kanban Board
+- [Kanban Board](https://github.com/users/kamzzy/projects/4/views/1)
+- We were **4** students in this project
+- Kanban Board in the beginning of the project: 
+<img width="1440" alt="193262262-071d7162-d0a1-455c-98e9-3e68ba1f58c0" src="https://user-images.githubusercontent.com/25887253/195709445-3e1b51b6-9b35-41ce-9525-332eb88f7cc7.png">
+
 ## Built With
+
 
 ### Frontend
 
@@ -147,7 +158,7 @@ Feel free to check the [issues page](https://github.com/felixodette/hotel-room-f
 
 ### Attributions and Credit
 
-Orignal design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
+Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
 
 ## Show your support
 
