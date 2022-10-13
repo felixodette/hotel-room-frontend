@@ -11,7 +11,7 @@ import MyReservations from './Reservations/MyReservations';
 
 function App() {
   return (
-    // make the design responsive only for desktop
+  // make the design responsive only for desktop
     <div className="row m-0 p-0">
       <div className="col-md-2 w-sm-0 p-0">
         <Nav />
@@ -34,5 +34,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

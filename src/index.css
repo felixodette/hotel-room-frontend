@@ -22,7 +22,7 @@ body {
   }
 
   .sidebar {
-    width: 100%;
+    width: 100% !important;
   }
 
   nav {
@@ -48,7 +48,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 58px 0 0; /* Height of navbar */
-  min-width: 18rem;
+  width: 17.5%;
   z-index: 600;
 }
 
