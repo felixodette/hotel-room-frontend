@@ -47,7 +47,7 @@ exports[`Sidebar Navigation It correctly renders a nav component 1`] = `
         </a>
         <a
           class="list-group-item list-group-item-action py-2 ripple"
-          href="/reservations"
+          href="/my-reservations"
         >
           <span>
             My Reservations
@@ -203,7 +203,7 @@ Array [
         </a>
         <a
           className="list-group-item list-group-item-action py-2 ripple"
-          href="/reservations"
+          href="/my-reservations"
         >
           <span>
             My Reservations
