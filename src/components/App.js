@@ -11,7 +11,7 @@ import MyReservations from './Reservations/MyReservations';
 
 function App() {
   return (
-    // make the design responsive only for desktop
+  // make the design responsive only for desktop
     <div className="row m-0 p-0">
       <div className="col-md-2 w-sm-0 p-0">
         <Nav />
@@ -32,21 +32,6 @@ function App() {
         </BrowserRouter>
       </div>
     </div>
-    <div className="col-md-10 p-0 vh-100">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Rooms />} />
-          <Route path="/reservations" element={<MyReservations />} />
-          <Route path="/reservations-new" element={<ReservationForm />} />
-          <Route path="/room-new" element={<AddRoom />} />
-          <Route path="/room/:id" element={<Room />} />
-          {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
-          <Route path="/room-delete" element={<DeleteRoom />} />
-          <Route path="/user" element={<AddUser />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  </div>
-);
-
+  );
+}
 export default App;
