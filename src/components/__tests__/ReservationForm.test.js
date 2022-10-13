@@ -43,4 +43,3 @@ describe('Reservations form', () => {
     expect(tree).toMatchSnapshot();
   });
 });
-

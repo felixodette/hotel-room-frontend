@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import '../styles/AddRoom.css';
@@ -69,7 +70,8 @@ const ReservationForm = () => {
           <br />
 
           <select
-            onChange={(e) => setRoom(e.target.value)}
+            onBlur={(e) => setRoom(e.target.value)}
+            autoFocus
             style={{
               outline: 'none',
               width: '95%',
