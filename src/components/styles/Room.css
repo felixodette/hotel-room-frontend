@@ -34,6 +34,12 @@
   justify-content: center;
 }
 
+#reserve-button:hover {
+  color: #97bf11;
+  background-color: #fff;
+  border: 2px solid #97bf11;
+}
+
 .reserve-btn button {
   background-color: #97bf11;
   color: #fff;
@@ -67,4 +73,18 @@
 .back-arrow button:hover {
   background-color: #97bf11;
   color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .room-div {
+    padding: 5rem 0 0 0;
+  }
+
+  .back-arrow {
+    display: none;
+  }
+
+  .reserve-btn {
+    padding: 5% 0 5% 0;
+  }
 }
