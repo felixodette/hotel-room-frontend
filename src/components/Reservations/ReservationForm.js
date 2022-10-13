@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import '../styles/AddRoom.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { getRooms } from '../../redux/rooms';
 
 const ReservationForm = () => {
   const [city, setCity] = useState('');
   const [date, setDate] = useState('');
+  const [roomId, setRoom] = useState('');
   const [message, setMessage] = useState('');
-  const { id, userId } = useParams();
+  const userId = localStorage.getItem('id');
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const rooms = useSelector((state) => state.rooms.rooms);
   const submitReservation = (e) => {
     e.preventDefault();
     const reservation = {
-      room_id: id,
+      room_id: roomId,
       user_id: userId,
       city,
       date,
@@ -37,6 +43,10 @@ const ReservationForm = () => {
     setInterval(() => { setMessage(''); }, 5000);
   };
 
+  useEffect(() => {
+    dispatch(getRooms());
+  }, [dispatch]);
+
   return (
     <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5 pt-5">
       <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-2 text-white text-uppercase">Add Reservation</h2>
@@ -57,13 +67,24 @@ const ReservationForm = () => {
           Room ID
           {' '}
           <br />
-          <input
-            type="text"
-            className="col-12 bg-transparent-add-room rounded"
-            id="room_id"
+
+          <select
+            onChange={(e) => setRoom(e.target.value)}
+            style={{
+              outline: 'none',
+              width: '95%',
+              borderRadius: '2px',
+            }}
             value={id}
-            readOnly
-          />
+            placeholder="Choose a House you want to reserve."
+            id="dropdown-menu-align-end"
+          >
+            { rooms.map((room) => (
+              <option key={room.id} value={room.id}>
+                {room.name}
+              </option>
+            ))}
+          </select>
         </label>
         <label htmlFor="user_id" className="text-white  col-md-8 mb-3">
           User ID
