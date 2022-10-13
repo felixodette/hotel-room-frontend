@@ -35,26 +35,28 @@ const MyReservations = () => {
         Here you can see all your reservations
         {' '}
       </p>
-      <table className="table w-50 table-hover" id="delete-room-table">
-        <thead>
-          <tr>
-            <th scope="col" className="text-white">ID</th>
-            <th scope="col" className="text-white">Rooms Name</th>
-            <th scope="col" className="text-white">Reservation Date</th>
-            <th scope="col" className="text-white">City</th>
-          </tr>
-        </thead>
-        <tbody>
-          {reservations.map((reservation) => (
-            <tr key={reservation.id} className="room">
-              <td><p className="text-white mt-3" id="room-name">{reservation.id}</p></td>
-              <td><p className="text-white mt-3" id="room-name">{rooms.find((room) => room.id === reservation.room_id).name}</p></td>
-              <td><p className="text-white mt-3" id="room-name">{reservation.date}</p></td>
-              <td><p className="text-white mt-3" id="room-name">{reservation.city}</p></td>
+      <div id="delete-room-table" className="table w-50 table-hover">
+        <table className="table w-100 table-hover">
+          <thead>
+            <tr>
+              <th scope="col" className="text-white">ID</th>
+              <th scope="col" className="text-white">Rooms Name</th>
+              <th scope="col" className="text-white">Reservation Date</th>
+              <th scope="col" className="text-white">City</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {reservations.map((reservation) => (
+              <tr key={reservation.id} className="room">
+                <td><p className="text-white mt-3" id="room-name">{reservation.id}</p></td>
+                <td><p className="text-white mt-3" id="room-name">{rooms.filter((room) => room.id === reservation.room_id).name}</p></td>
+                <td><p className="text-white mt-3" id="room-name">{reservation.date}</p></td>
+                <td><p className="text-white mt-3" id="room-name">{reservation.city}</p></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

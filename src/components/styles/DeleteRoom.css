@@ -25,3 +25,8 @@
     width: 100% !important;
   }
 }
+
+#delete-room-table {
+  overflow:scroll;
+  height: 70%;
+}
