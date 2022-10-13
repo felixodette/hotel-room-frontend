@@ -64,8 +64,11 @@ const ReservationForm = () => {
         className="col-md-6 d-flex align-items-center flex-column justify-content-center"
         onSubmit={submitReservation}
       >
-        <label htmlFor="room_id" className="text-white col-md-8 mb-3 pt-3
-">
+        <label
+          htmlFor="room_id"
+          className="text-white col-md-8 mb-3 pt-3
+"
+        >
           Room ID
           {' '}
           <br />
