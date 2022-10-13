@@ -48,15 +48,14 @@ const AddRoom = () => {
   return (
     <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center">
       <h2 id="add-room-heading" className="text-center  fw-bold fs-1 text-white text-uppercase">Add Room</h2>
-      <hr id="add-room-hr" />
+      <hr id="add-room-hr" className="m-1" />
       <p className="text-center  fs-6 text-white">
         Would you like to sell your hotel room to our website?
         {' '}
         <br />
         No need to wait. Fill the forms below your room will be added to our website accordingly!
         {' '}
-        <br />
-        And start earn some money today!
+
       </p>
       <form
         id="add-room-form"
