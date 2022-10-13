@@ -8,28 +8,8 @@
 @media (max-width: 768px) {
   #add-room-form {
     width: 90% !important;
-  }
-
-
-
-  #add-room-form {
     height: 100%;
     padding-bottom: 50px;
-  }
-
-
-      }
-
-      #add-room-heading {
-        margin-top: 80px;
-
-  #name,
-  #description,
-  #image,
-  #size,
-  #view,
-  #bedding {
-    height: 30px !important;
   }
 
   ::placeholder {
@@ -59,6 +39,10 @@
 
 .bg-transparent-add-room[type=text]:focus-visible {
   outline-color: #97bf11 !important;
+}
+
+#add-room-heading {
+  margin-top: 80px;
 }
 
 #name,
