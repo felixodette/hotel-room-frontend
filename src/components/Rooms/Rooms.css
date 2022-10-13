@@ -1,24 +1,36 @@
-.room-card:hover {
-  box-shadow: 0 0 10px 0 #96bf1165;
+#rooms-cotainer {
+  min-height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* only apply this for md screens */
-@media (min-width: 768px) {
-  .slide-dots {
-    margin-left: 100px;
-  }
+.room-card:hover {
+  box-shadow: 0 0 10px 0 #96bf1165;
 }
 
 .room-description {
   font-size: 1rem;
 }
 
-.room-image {
-  width: 250px;
-  height: 250px;
+#room-image {
+  width: 280px;
+  height: 200px;
 }
 
 .social-icons:hover {
   color: #fff;
   background-color: #000;
+}
+
+.carousel-dots {
+  bottom: 5%;
+}
+
+@media (min-width: 768px) {
+  .carousel-dots {
+    margin-left: 18%;
+  }
 }
