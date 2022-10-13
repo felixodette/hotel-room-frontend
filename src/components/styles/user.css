@@ -1,0 +1,83 @@
+.signup {
+  min-height: 100%;
+  background: linear-gradient(0deg, rgba(151, 191, 17, 0.8), rgba(151, 191, 17, 0.8)), url("https://cache.marriott.com/content/dam/marriott-renditions/BJVEB/bjveb-suite-0236-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*");
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .user-form {
+    width: 90% !important;
+  }
+
+  #name {
+    height: 30px !important;
+  }
+
+  ::placeholder {
+    font-size: 12px !important;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
+
+.add-user-header {
+  width: 50%;
+  border-width: 2px;
+  border-color: white;
+}
+
+.bg-transparent-add-user {
+  background-color: rgba(151, 191, 17, 0.9);
+}
+
+.bg-transparent-add-user[type=text]:focus {
+  color: black !important;
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.4s;
+}
+
+.bg-transparent-add-user[type=text]:focus-visible {
+  outline-color: #97bf11 !important;
+}
+
+#name {
+  border: 2px solid white;
+  padding-left: 15px;
+  color: white;
+  height: 35px;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.8;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.user-submit {
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: #97bf11;
+  transition-duration: 0.4s;
+}
+
+.user-submit:hover {
+  background-color: #97bf11;
+  color: white;
+  border: 2px solid white;
+}
+
+#add-room-submit-btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+label {
+  width: 100%;
+}

@@ -1,70 +1,178 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## SuiteUp
 
-## Available Scripts
+<img width="1439" alt="Screen Shot 2022-10-14 at 12 09 43 AM" src="https://user-images.githubusercontent.com/25887253/195711402-bc3223ce-c1bd-40d5-93ce-73dc0f564891.png">
 
-In the project directory, you can run:
+> Hotel Room is a project that simulates a hotel room booking system. It allows users to book a room for one night. It also allows users to see the list of all booked rooms on that day and see a list of rooms that are not booked yet. You can check the source code for backend [here](https://github.com/kamzzy/Hotel-Room).
 
-### `npm start`
+## Live Demo
+- [Front End](https://hotel-room-frontend.vercel.app/) 
+- [Back End API](https://afternoon-fjord-27064.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Kanban Board
+- [Kanban Board](https://github.com/users/kamzzy/projects/4/views/1)
+- We were **4** students in this project
+- Kanban Board in the beginning of the project: 
+<img width="1440" alt="193262262-071d7162-d0a1-455c-98e9-3e68ba1f58c0" src="https://user-images.githubusercontent.com/25887253/195709445-3e1b51b6-9b35-41ce-9525-332eb88f7cc7.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+- [x] Programming Language: [JavaScript](https://www.javascript.com/)
+- [x] Framework: [React](https://reactjs.org/)
+- [x] Library: [Redux](https://redux.js.org/)
+- [x] Linter: [ESLint](https://eslint.org/)
+- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
+- [x] Testing Framework: [Jest](https://jestjs.io/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
+- [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
+- [x] Database: [PostgreSQL](https://www.postgresql.org/)
+- [x] Testing Framework: [RSpec](https://rspec.info/)
+- [x] API Documentation: [Swagger](https://swagger.io/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get a local copy up and running follow these simple example steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1- Clone both repositories:
+```
+$ git clone git@github.com:felixodette/hotel-room-frontend.git
+```
+```
+$ git clone git@github.com:kamzzy/Hotel-Room.git
+```
+2- Go to the repository folder of Hotel-Room in your command prompt:
+```
+$ cd Hotel-Room
+```
+3- You might need to install dependecies with:
+```
+$ bundle install
+```
+4- Go to command line and run the command below for the live server:
+```
+$ rails server
+```
+5- Go to the repository folder of hotel-room-frontend in your command prompt:
+```
+$ cd hotel-room-frontend
+```
+6- You might need to install dependecies with:
+```
+$ yarn install
+```
+OR
+```
+$ npm install
+```
+7- Go to command line and run the command below for the live server:
+```
+$ yarn start
+```
+OR
+```
+$ npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [x] A web browser like [Google Chrome](https://www.google.com/chrome/).
+- [x] A code editor like [Visual Studio Code](https://code.visualstudio.com/).
+- [x] A terminal to run the code.
+- [x] [Ruby](https://www.ruby-lang.org/en/) installed on your computer.
+- [x] [Rails](https://rubyonrails.org/) installed on your computer.
+- [x] [Node.js](https://nodejs.org/en/) installed on your computer.
+- [x] [PostgreSQL](https://www.postgresql.org/) installed on your computer.
+- [x] [Yarn](https://yarnpkg.com/) installed on your computer.
+- [x] [Git](https://git-scm.com/) installed on your computer.
 
-## Learn More
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To install rails, in the terminal kindly run this command
+```
+$ gem install rails
+```
 
-### Code Splitting
+To check if node is installed, kindly run this command in the terminal.
+```
+$ node --version
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To check if yarn is installed, kindly run this command in the terminal.
+```
+$ yarn --version
+```
 
-### Analyzing the Bundle Size
+To check if PostgreSQL is installed, kindly run this command in the terminal.
+```
+$ psql --version
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Authors
 
-### Making a Progressive Web App
+👤 **Ahmad Zamir Yousufi** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GitHub: [@ahzamir](https://github.com/ahzamir).
+- Twitter: [@YousufiZamir](https://twitter.com/YousufiZamir)
+- LinkedIn: [ahzamir](https://www.linkedin.com/in/ahzamir/)
 
-### Advanced Configuration
+👤 **Huseyin Biyik** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- GitHub: [@huseyinbiyik](https://github.com/huseyinbiyik).
+- Twitter: [@huseyin__biyik](https://twitter.com/huseyin__biyik)
+- LinkedIn: [Huseyin_biyik](http://www.linkedin.com/in/tahahuseyinbiyik/)
 
-### Deployment
+👤 **Precious Akams** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- GitHub: [@kamzzy](https://github.com/kamzzy).
+- Twitter: [@precious_akams](https://twitter.com/precious_akams)
+- LinkedIn: [Onyeagoziri_Akams](https://www.linkedin.com/in/Onyeagoziri_Akams/)
 
-### `npm run build` fails to minify
+👤 **Felix Odete** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub: [@felixodette](https://github.com/felixodette).
+- Twitter: [@Odette3000](https://twitter.com/Odette3000)
+- LinkedIn: [Felix_Odete](https://www.linkedin.com/in/Felix_Odete/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/felixodette/hotel-room-frontend/issues).
+
+### Attributions and Credit
+
+Original design idea by [Murat Korkmaz on Behance](https://www.behance.net/muratk).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
+- Coding Partners
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
+![](https://img.shields.io/badge/Microverse-blueviolet)

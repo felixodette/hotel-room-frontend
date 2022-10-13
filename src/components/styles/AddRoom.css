@@ -1,0 +1,117 @@
+#add-room-container {
+  min-height: 100%;
+  background: linear-gradient(0deg, rgba(151, 191, 17, 0.8), rgba(151, 191, 17, 0.8)), url("https://cache.marriott.com/content/dam/marriott-renditions/BJVEB/bjveb-suite-0236-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px:*");
+  background-size: cover;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  #add-room-form {
+    width: 90% !important;
+    height: 100%;
+    padding-bottom: 50px;
+  }
+
+  ::placeholder {
+    font-size: 12px !important;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
+
+#add-room-hr {
+  width: 50%;
+  border-width: 2px;
+  border-color: white;
+}
+
+.bg-transparent-add-room {
+  background-color: rgba(151, 191, 17, 0.9);
+}
+
+.bg-transparent-add-room[type=text]:focus {
+  color: black !important;
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.4s;
+}
+
+.bg-transparent-add-room[type=text]:focus-visible {
+  outline-color: #97bf11 !important;
+}
+
+#add-room-heading {
+  margin-top: 80px;
+}
+
+#name,
+#description,
+#image,
+#size,
+#view,
+#bedding,
+#city,
+#date,
+#room_id,
+#user_id {
+  border: 2px solid white;
+  padding-left: 15px;
+  color: white;
+  height: 35px;
+}
+
+#date {
+  width: 100%;
+  background-color: rgba(151, 191, 17, 0.9);
+  border-radius: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.8;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+#add-room-submit-btn {
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: #97bf11;
+  transition-duration: 0.4s;
+}
+
+#add-room-submit-btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+label {
+  width: 100%;
+}
+
+/* Form Notifications */
+.add-room-success-notification {
+  color: #97bf11;
+}
+
+/* Hide input number increment buttons */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

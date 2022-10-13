@@ -1,0 +1,32 @@
+#delete-room-container {
+  min-height: 100%;
+  background: linear-gradient(0deg, rgba(151, 191, 17, 0.8), rgba(151, 191, 17, 0.8)), url("https://cache.marriott.com/content/dam/marriott-renditions/BJVEB/bjveb-deluxe-0003-hor-wide.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1336px");
+  background-size: cover;
+  height: 100vh;
+}
+
+#delete-room-btn {
+  border: 0;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: #97bf11;
+  transition-duration: 0.4s;
+}
+
+#delete-room-btn:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #delete-room-table {
+    width: 100% !important;
+  }
+}
+
+#delete-room-table {
+  overflow: scroll;
+  height: 70%;
+}
