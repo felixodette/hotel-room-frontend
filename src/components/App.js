@@ -7,6 +7,7 @@ import AddUser from './user';
 import Room from './Rooms/Room';
 import Nav from './Nav';
 import ReservationForm from './Reservations/ReservationForm';
+import MakeReservation from './Reservations/MakeReservation';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Rooms />} />
             {/* <Route path="/reservations" element={<MyReservations />} /> */}
             <Route path="/reservations-new/:id/:userId" element={<ReservationForm />} />
+            <Route path="/reservations-new/" element={<MakeReservation />} />
             <Route path="/room-new" element={<AddRoom />} />
             <Route path="/room/:id" element={<Room />} />
             {/* <Route path="/room-list" element={<IndexRemoveRoom />} /> */}
