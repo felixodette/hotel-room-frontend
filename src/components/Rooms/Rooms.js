@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import Carousel from 'react-multi-carousel';
 import { getRooms } from '../../redux/rooms';
 import 'react-multi-carousel/lib/styles.css';
-import './Rooms.css';
+import '../styles/Rooms.css';
 
 const Rooms = () => {
   const dispatch = useDispatch();
