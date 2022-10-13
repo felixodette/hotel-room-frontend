@@ -36,7 +36,7 @@ const ReservationForm = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(reservation),
     };
-    fetch(`http://localhost:3000/api/v1/users/${userId}/reservations`, requestOptions)
+    fetch(`https://afternoon-fjord-27064.herokuapp.com/api/v1/users/${userId}/reservations`, requestOptions)
       .then((response) => notify(response.status));
 
     setCity('');
