@@ -19,15 +19,14 @@ const Room = () => {
       .then((data) => setRoomDetails(data));
   }, []);
 
-  const navigateToReserve = (id, userId) => {
-    navigate(`/reservations-new/${id}/${userId}`);
+  const navigateToReserve = (id) => {
+    navigate(`/reservations-new/${id}`);
   };
   const userLogin = (id) => {
     if (localStorage.getItem('id') === null) {
       navigate('/user');
     } else {
-      const userId = localStorage.getItem('id');
-      navigateToReserve(id, userId);
+      navigateToReserve(id);
     }
   };
   const backBtn = () => {
