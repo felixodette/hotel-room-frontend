@@ -4,19 +4,20 @@ exports[`Rooms It renders the Rooms component correctly 1`] = `
 <div>
   <div
     class="w-100"
+    id="rooms-containerr"
   >
     <h1
-      class="text-center mt-5 mb-2 pt-5 fw-bold fs-1"
+      class="text-center mt-5 mb-2 pt-5 mt-md-1 fw-bold fs-2"
     >
       ROOMS
     </h1>
     <h2
-      class="text-center mt-2 mb-5 fw-bold opacity-50 fs-5"
+      class="text-center mt-2 mb-3 fw-bold opacity-50 fs-5"
     >
       Please select a Room
     </h2>
     <div
-      class="react-multi-carousel-list carousel-container ms-2 me-2 pt-5 pb-5 "
+      class="react-multi-carousel-list carousel-container ms-2 me-2 pt-2 pb-2 "
       dir="ltr"
     >
       <ul
@@ -24,7 +25,6 @@ exports[`Rooms It renders the Rooms component correctly 1`] = `
         style="transition: none; overflow: unset; transform: translate3d(0px,0,0);"
       />
     </div>
-    ;
   </div>
 </div>
 `;
@@ -32,19 +32,20 @@ exports[`Rooms It renders the Rooms component correctly 1`] = `
 exports[`Rooms It renders the Rooms component correctly 2`] = `
 <div
   className="w-100"
+  id="rooms-containerr"
 >
   <h1
-    className="text-center mt-5 mb-2 pt-5 fw-bold fs-1"
+    className="text-center mt-5 mb-2 pt-5 mt-md-1 fw-bold fs-2"
   >
     ROOMS
   </h1>
   <h2
-    className="text-center mt-2 mb-5 fw-bold opacity-50 fs-5"
+    className="text-center mt-2 mb-3 fw-bold opacity-50 fs-5"
   >
     Please select a Room
   </h2>
   <div
-    className="react-multi-carousel-list carousel-container ms-2 me-2 pt-5 pb-5 "
+    className="react-multi-carousel-list carousel-container ms-2 me-2 pt-2 pb-2 "
     dir="ltr"
   >
     <ul
@@ -66,6 +67,5 @@ exports[`Rooms It renders the Rooms component correctly 2`] = `
       }
     />
   </div>
-  ;
 </div>
 `;

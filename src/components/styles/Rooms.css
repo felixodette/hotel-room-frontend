@@ -1,0 +1,36 @@
+#rooms-cotainer {
+  min-height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-card:hover {
+  box-shadow: 0 0 10px 0 #96bf1165;
+}
+
+.room-description {
+  font-size: 1rem;
+}
+
+#room-image {
+  width: 280px;
+  height: 200px;
+}
+
+.social-icons:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.carousel-dots {
+  bottom: 5%;
+}
+
+@media (min-width: 768px) {
+  .carousel-dots {
+    margin-left: 18%;
+  }
+}
