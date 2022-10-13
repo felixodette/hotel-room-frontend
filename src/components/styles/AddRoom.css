@@ -53,11 +53,25 @@
 #image,
 #size,
 #view,
-#bedding {
+#bedding,
+#city,
+#date,
+#room_id,
+#user_id {
   border: 2px solid white;
   padding-left: 15px;
   color: white;
   height: 35px;
+}
+
+#date {
+  width: 100%;
+  background-color: rgba(151, 191, 17, 0.9);
+  border-radius: 5px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 ::placeholder {
