@@ -48,14 +48,15 @@ const ReservationForm = () => {
     dispatch(getRooms());
   }, [dispatch]);
 
-  // check if userId is null and redirect to login page
   if (userId === null) {
     return (
       <div id="add-room" className="container-fluid d-flex flex-column align-items-center mb-5 pt-5 justify-content-center">
-        <h2 className='text-center text-white'>Please login to make a reservation</h2>
-        <button type="button"
+        <h2 className="text-center text-white">Please login to make a reservation</h2>
+        <button
+          type="button"
           className="fw-bold"
           id="login-button"
+          // eslint-disable-next-line no-return-assign
           onClick={() => window.location.href = '/user'}
         >
           Login
