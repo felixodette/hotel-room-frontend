@@ -34,13 +34,7 @@
   justify-content: center;
 }
 
-#reserve-button:hover {
-  color: #97bf11;
-  background-color: #fff;
-  border: 2px solid #97bf11;
-}
-
-.reserve-btn button {
+#reserve-button {
   background-color: #97bf11;
   color: #fff;
   border-radius: 20px;
@@ -49,9 +43,14 @@
   display: flex;
   justify-content: space-between;
   height: 40px;
-  transition-duration: 0.4s;
   padding: 0 7px;
-  border: none;
+  border: 2px solid #97bf11;
+}
+
+#reserve-button:hover {
+  color: #97bf11;
+  background-color: #fff;
+  /* border: 2px solid #97bf11; */
 }
 
 .back-arrow {

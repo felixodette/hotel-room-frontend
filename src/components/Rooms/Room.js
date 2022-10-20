@@ -33,7 +33,6 @@ const Room = () => {
     navigate('/');
   };
 
-  // check if the roomDetails is empty render loading else render the room details
   if (roomDetails === '') {
     return (
       <div className="d-flex justify-content-center align-items-center h-100 mt-5 pt-5 mt-md-0 pt-md-0">
@@ -74,7 +73,6 @@ const Room = () => {
           <div className="reserve-btn">
             <button type="button" className="fw-bold d-flex align-center justify-content-around" id="reserve-button" onClick={() => userLogin(roomDetails.id)}>
               Reserve
-              <span><IoIosArrowDropright /></span>
             </button>
           </div>
         </div>
