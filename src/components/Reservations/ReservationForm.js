@@ -48,8 +48,23 @@ const ReservationForm = () => {
     dispatch(getRooms());
   }, [dispatch]);
 
+  // check if userId is null and redirect to login page
+  if (userId === null) {
+    return (
+      <div id="add-room" className="container-fluid d-flex flex-column align-items-center mb-5 pt-5 justify-content-center">
+        <h2 className='text-center text-white'>Please login to make a reservation</h2>
+        <button type="button"
+          className="fw-bold"
+          id="login-button"
+          onClick={() => window.location.href = '/user'}
+        >
+          Login
+        </button>
+      </div>
+    );
+  }
   return (
-    <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5 pt-5">
+    <div id="add-room-container" className="container-fluid d-flex flex-column align-items-center mb-5 pt-5">
       <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-2 text-white text-uppercase">Add Reservation</h2>
       <hr id="add-room-hr" />
       <p className="text-center  fs-6 text-white">
@@ -86,7 +101,7 @@ const ReservationForm = () => {
             placeholder="Choose a House you want to reserve."
             id="dropdown-menu-align-end"
           >
-            { rooms.map((room) => (
+            {rooms.map((room) => (
               <option key={room.id} value={room.id}>
                 {room.name}
               </option>
