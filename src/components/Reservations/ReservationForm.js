@@ -50,7 +50,7 @@ const ReservationForm = () => {
 
   if (userId === null) {
     return (
-      <div id="add-room" className="container-fluid d-flex flex-column align-items-center mb-5 pt-5 justify-content-center">
+      <div id="add-room" className="container-fluid d-flex flex-column align-items-center mb-5 justify-content-center">
         <h2 className="text-center text-white">Please login to make a reservation</h2>
         <button
           type="button"

@@ -18,7 +18,7 @@ const MyReservations = () => {
 
   if (!localStorage.getItem('id')) {
     return (
-      <div id="delete-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5">
+      <div id="delete-room-container" className="container-fluid d-flex flex-column align-items-center mb-5 justify-content-center">
         <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-1 text-white text-uppercase">You are not logged in</h2>
         <hr id="add-room-hr" />
         <p className="text-center  fs-6 text-white">
