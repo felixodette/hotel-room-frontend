@@ -33,6 +33,17 @@ const Room = () => {
     navigate('/');
   };
 
+  // check if the roomDetails is empty render loading else render the room details
+  if (roomDetails === '') {
+    return (
+      <div className="d-flex justify-content-center align-items-center h-100 mt-5 pt-5 mt-md-0 pt-md-0">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="row room-div">
       <div className="col-md-8 room-image">
