@@ -98,9 +98,9 @@ const Rooms = () => {
 
   if (rooms.length === 0) {
     return (
-      <div className="loading">
+      <div className="d-flex justify-content-center align-items-center h-100 mt-5 pt-5 mt-md-0 pt-md-0">
         <div className="spinner-border text-success" role="status">
-          <span className="sr-only">Loading...</span>
+          <span className="visually-hidden">Loading...</span>
         </div>
       </div>
     );
