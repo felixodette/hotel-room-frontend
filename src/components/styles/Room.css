@@ -50,7 +50,7 @@
 #reserve-button:hover {
   color: #97bf11;
   background-color: #fff;
-  /* border: 2px solid #97bf11; */
+  border: 2px solid #97bf11;
 }
 
 .back-arrow {
