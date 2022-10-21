@@ -27,6 +27,6 @@
 }
 
 #delete-room-table {
-  overflow: scroll;
-  height: 70%;
+  overflow-y: scroll;
+  height: auto;
 }

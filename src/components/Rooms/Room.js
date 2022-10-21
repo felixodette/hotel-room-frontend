@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../styles/Room.css';
-import { IoIosArrowDropright } from 'react-icons/io';
 import { BiLeftArrow } from 'react-icons/bi';
 
 const Room = () => {
@@ -33,6 +32,16 @@ const Room = () => {
     navigate('/');
   };
 
+  if (roomDetails === '') {
+    return (
+      <div className="d-flex justify-content-center align-items-center h-100 mt-5 pt-5 mt-md-0 pt-md-0">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="row room-div">
       <div className="col-md-8 room-image">
@@ -63,7 +72,6 @@ const Room = () => {
           <div className="reserve-btn">
             <button type="button" className="fw-bold d-flex align-center justify-content-around" id="reserve-button" onClick={() => userLogin(roomDetails.id)}>
               Reserve
-              <span><IoIosArrowDropright /></span>
             </button>
           </div>
         </div>
