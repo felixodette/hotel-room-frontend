@@ -4,28 +4,36 @@ import { FaBars, FaTwitter } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiFillLinkedin } from 'react-icons/ai';
 
+// check which page is active and add active class to the link
+const activePage = (page) => {
+  if (window.location.pathname === page) {
+    return 'active';
+  }
+  return '';
+};
+
 const Nav = () => (
   <>
     <nav id="sidebarMenu" className="collapse d-lg-block sidebar">
       <div className="position-sticky">
         <div className="list-group list-group-flush mx-3 mt-4">
 
-          <a href="/" className="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
+          <a href="/" className={`list-group-item list-group-item-action py-2 ripple ${activePage('/')}`} aria-current="true">
             <span>Home</span>
           </a>
-          <a href="/room-new" className="list-group-item list-group-item-action py-2 ripple ">
+          <a href="/room-new" className={`list-group-item list-group-item-action py-2 ripple ${activePage('/room-new')}`}>
             <span>Add Room</span>
           </a>
-          <a href="/room-delete" className="list-group-item list-group-item-action py-2 ripple">
+          <a href="/room-delete" className={`list-group-item list-group-item-action py-2 ripple ${activePage('/room-delete')}`}>
             <span>Delete Room</span>
           </a>
-          <a href="/reservations-new" className="list-group-item list-group-item-action py-2 ripple">
+          <a href="/reservations-new" className={`list-group-item list-group-item-action py-2 ripple ${activePage('/reservations-new')}`}>
             <span>Make Reservations</span>
           </a>
-          <a href="/my-reservations" className="list-group-item list-group-item-action py-2 ripple">
+          <a href="/my-reservations" className={`list-group-item list-group-item-action py-2 ripple ${activePage('/my-reservations')}`}>
             <span>My Reservations</span>
           </a>
-          <a href="/user" className="list-group-item list-group-item-action py-2 ripple">
+          <a href="/user" className={`list-group-item list-group-item-action py-2 ripple ${activePage('/user')}`}>
             <span>Login</span>
           </a>
         </div>

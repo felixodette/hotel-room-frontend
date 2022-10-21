@@ -30,8 +30,18 @@ const DeleteRoom = () => {
   useEffect(() => {
     dispatch(getRooms());
   }, [dispatch]);
+
+  if (rooms.length === 0) {
+    return (
+      <div className="d-flex justify-content-center align-items-center h-100 mt-5 pt-5 mt-md-0 pt-md-0">
+        <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
   return (
-    <div id="delete-room-container" className="container-fluid d-flex flex-column align-items-center h-100 mb-5">
+    <div id="delete-room-container" className="container-fluid d-flex flex-column align-items-center mb-5 pt-5">
       <h2 id="add-room-heading" className="text-center  mt-5 fw-bold fs-1 text-white text-uppercase">Delete Room</h2>
       <hr id="add-room-hr" />
       <p className="text-center  fs-6 text-white">
