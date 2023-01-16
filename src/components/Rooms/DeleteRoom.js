@@ -23,7 +23,7 @@ const DeleteRoom = () => {
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
     };
 
-    fetch(`https://afternoon-fjord-27064.herokuapp.com/api/v1/rooms/${id}`, requestOptions)
+    fetch(`https://suiteup-backend.onrender.com/api/v1/rooms/${id}`, requestOptions)
       .then((response) => checkResponse(response.status, id));
   };
 

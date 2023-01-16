@@ -1,4 +1,4 @@
-const roomsApiUrl = 'https://afternoon-fjord-27064.herokuapp.com/api/v1/rooms';
+const roomsApiUrl = 'https://suiteup-backend.onrender.com/api/v1/rooms';
 
 const GET_ROOMS = 'GET_ROOMS';
 const DELETE_ROOM = 'DELETE_ROOM';

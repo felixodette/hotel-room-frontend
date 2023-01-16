@@ -13,7 +13,7 @@ const Room = () => {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     };
-    fetch(`https://afternoon-fjord-27064.herokuapp.com/api/v1/rooms/${id}`, roomData)
+    fetch(`https://suiteup-backend.onrender.com/api/v1/rooms/${id}`, roomData)
       .then((response) => response.json())
       .then((data) => setRoomDetails(data));
   }, []);

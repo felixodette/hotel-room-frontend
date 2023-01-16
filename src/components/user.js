@@ -17,7 +17,7 @@ function AddUser() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
     };
-    fetch('https://afternoon-fjord-27064.herokuapp.com/api/v1/users', userData)
+    fetch('https://suiteup-backend.onrender.com/api/v1/users', userData)
       .then((response) => response.json())
       .then((data) => { localStorage.setItem('id', data.id); localStorage.setItem('name', data.name); })
       .then(setAlert('User created'));

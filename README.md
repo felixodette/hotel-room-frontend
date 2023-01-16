@@ -7,7 +7,7 @@
 
 ## Live Demo
 - [Front End](https://hotel-room-frontend-4aeq01taj-felixodette.vercel.app/) 
-- [Back End API](https://afternoon-fjord-27064.herokuapp.com/)
+- [Back End API](https://suiteup-backend.onrender.com/)
 
 ## Kanban Board
 - [Kanban Board](https://github.com/users/kamzzy/projects/4/views/1)

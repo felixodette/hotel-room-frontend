@@ -34,7 +34,7 @@ const AddRoom = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(room),
     };
-    fetch('https://afternoon-fjord-27064.herokuapp.com/api/v1/rooms/', requestOptions)
+    fetch('https://suiteup-backend.onrender.com/api/v1/rooms/', requestOptions)
       .then((response) => notify(response.status));
 
     setName('');

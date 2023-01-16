@@ -1,7 +1,7 @@
 const GET_RESERVATIONS = 'GET_RESERVATIONS';
 
 export const getReservations = (userId) => async (dispatch) => {
-  const reservationApiUrl = `https://afternoon-fjord-27064.herokuapp.com/api/v1/users/${userId}/reservations`;
+  const reservationApiUrl = `https://suiteup-backend.onrender.com/api/v1/users/${userId}/reservations`;
   const response = await fetch(reservationApiUrl);
   const reservations = await response.json();
   dispatch({
