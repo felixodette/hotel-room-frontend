@@ -6,7 +6,7 @@
 > Hotel Room is a project that simulates a hotel room booking system. It allows users to book a room for one night. It also allows users to see the list of all booked rooms on that day and see a list of rooms that are not booked yet. You can check the source code for backend [here](https://github.com/kamzzy/Hotel-Room).
 
 ## Live Demo
-- [Front End](https://hotel-room-frontend-4aeq01taj-felixodette.vercel.app/) 
+- [Front End](https://hotel-room-frontend-lfv20xmh2-felixodette.vercel.app/) 
 - [Back End API](https://suiteup-backend.onrender.com/)
 
 ## Kanban Board
