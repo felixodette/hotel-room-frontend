@@ -140,9 +140,9 @@ $ psql --version
 
 👤 **Precious Akams** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-- GitHub: [@kamzzy](https://github.com/kamzzy).
+- GitHub: [@precious](https://github.com/preciousakams).
 - Twitter: [@precious_akams](https://twitter.com/precious_akams)
-- LinkedIn: [Onyeagoziri_Akams](https://www.linkedin.com/in/Onyeagoziri_Akams/)
+- LinkedIn: [Precious Akams](https://www.linkedin.com/in/preciousakams/)
 
 👤 **Felix Odete** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
